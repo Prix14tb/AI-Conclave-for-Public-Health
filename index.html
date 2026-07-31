@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>National Conclave on AI for Public Health | AIIMS Mangalagiri</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cyber: {
+              black: '#050811',
+              dark: '#0a0f1d',
+              card: '#111827',
+              cyan: '#00f2fe',
+              blue: '#4facfe',
+              neon: '#06b6d4'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glow-border {
+      box-shadow: 0 0 15px rgba(6, 182, 212, 0.25);
+      border: 1px solid rgba(6, 182, 212, 0.4);
+    }
+    .glow-border:hover {
+      box-shadow: 0 0 25px rgba(6, 182, 212, 0.5);
+      border: 1px solid rgba(6, 182, 212, 0.8);
+    }
+    .glow-text {
+      text-shadow: 0 0 12px rgba(0, 242, 254, 0.6);
+    }
+    .bg-grid {
+      background-image: radial-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 0);
+      background-size: 30px 30px;
+    }
+  </style>
+</head>
+<body class="bg-cyber-black text-slate-200 font-sans antialiased bg-grid selection:bg-cyan-500 selection:text-black">
+
+  <nav class="sticky top-0 z-50 bg-cyber-dark/90 backdrop-blur-lg border-b border-cyan-500/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <div class="flex items-center space-x-3">
+        <div class="flex items-center justify-center">
+          <img src="AIIMS logo.png" alt="AIIMS Mangalagiri Logo" class="h-16 w-auto object-contain">
+        </div>
+        <span class="text-xs uppercase tracking-widest text-cyan-400 font-semibold hidden sm:inline-block">AIIMS Mangalagiri</span>
+      </div>
+
+      <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wide uppercase text-slate-300">
+        <a href="#about" class="hover:text-cyan-400 transition">Academic Events</a>
+        <a href="#workshop" class="hover:text-cyan-400 transition">Workshop</a>
+        <a href="#panels" class="hover:text-cyan-400 transition">Keynotes & Panels</a>
+        <a href="#tracks" class="hover:text-cyan-400 transition">Focus Domains</a>
+        <a href="#registration" class="hover:text-cyan-400 transition">Registration</a>
+        <a href="#contact" class="hover:text-cyan-400 transition">Contact Us</a>
+        <a href="#team" class="hover:text-cyan-400 transition">Organizing Team</a>
+      </div>
+
+    </div>
+  </nav>
+
+  <header class="relative bg-gradient-to-b from-cyber-dark via-cyber-black to-cyber-black py-24 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-cyan-500/20">
+    <div class="max-w-5xl mx-auto text-center space-y-8 relative z-10">
+      
+      <div class="inline-block">
+        <span class="text-lg sm:text-2xl font-black uppercase tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-blue-500 glow-text block mb-2">
+          "Pitching Solutions, Empowering Communities"
+        </span>
+        <div class="h-0.5 w-3/4 mx-auto bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
+      </div>
+
+      <div>
+        <span class="text-2xl sm:text-4xl font-extrabold tracking-wider text-cyan-300 bg-cyan-950/60 border border-cyan-500/40 px-6 py-2 rounded-full inline-block shadow-[0_0_20px_rgba(0,242,254,0.2)]">
+          <i class="fa-solid fa-calendar-days mr-3 text-cyan-400"></i>14–16 December 2026
+        </span>
+      </div>
+
+      <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-tight uppercase text-white">
+        National Conclave on <br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Artificial Intelligence</span> <br/>
+        For Public Health
+      </h1>
+
+      <p class="text-cyan-200/80 text-sm sm:text-lg max-w-3xl mx-auto uppercase tracking-wide border-t border-b border-cyan-500/20 py-3">
+        Dept. of Community & Family Medicine, AIIMS Mangalagiri
+      </p>
+      <p class="text-lg text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">
+        A MULTI-SECTORAL CONFLUENCE <br/>  
+        navigating artificial intelligence for public health solutions.
+      </p>
+
+      <div class="pt-6 flex flex-col sm:flex-row justify-center gap-4">
+        <a href="https://forms.gle/t6LttjHPHdzeosSs6" 
+            target = "_blank" 
+            rel= "noopener noreferrer" 
+            class="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-black font-bold px-8 py-3.5 rounded-md shadow-[0_0_20px_rgba(0,242,254,0.4)] transition">
+          Register for Conclave
+        </a>
+        <a href="#workshopreg" class="bg-cyber-card border border-cyan-500/40 hover:border-cyan-400 text-cyan-300 font-semibold px-8 py-3.5 rounded-md transition">
+          Register for Workshop
+        </a>
+        <a href="https://forms.gle/KVrRbGugvKt4zfQJ8" 
+            target = "_blank" 
+            rel= "noopener noreferrer" 
+            class="bg-cyber-card border border-cyan-500/40 hover:border-cyan-400 text-cyan-300 font-semibold px-8 py-3.5 rounded-md transition">
+          Submit Abstract
+        </a>
+      </div>
+       <div class="mt-4 bg-cyan-950/40 border border-cyan-500/30 text-cyan-200 text-xs sm:text-sm px-4 py-2.5 rounded-lg max-w-3xl mx-auto">
+        <i class="fa-solid fa-circle-info text-cyan-400 mr-2"></i>
+        <strong>Note:</strong> Upon registration for the conclave, the participants will receive an unique ID to their registered e-mail address. Please proceed to abstract submission only after receiving your registration ID.
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-extrabold text-white uppercase tracking-wider glow-text">Academic Events</h2>
+      <div class="w-16 h-1 bg-cyan-400 mx-auto mt-2"></div>
+    </div>
+
+    <div class="bg-cyber-card rounded-xl p-8 glow-border">
+      <p class="text-slate-300 text-lg leading-relaxed text-center max-w-4xl mx-auto mb-8">
+        The National Conclave features high-impact academic forums designed to foster interdisciplinary innovations. The event includes an <strong class="text-cyan-400">Idea-Pitching Contest for AI-based models in public health</strong>, <br/> 
+        alongside competitive <strong class="text-cyan-400">Research Paper Presentations (Oral & Poster)</strong>.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-cyber-dark p-6 rounded-lg border border-slate-800">
+          <div class="text-cyan-400 text-2xl mb-3"><i class="fa-solid fa-lightbulb"></i></div>
+          <h3 class="text-xl font-bold text-white mb-2">Idea Pitching Contest</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Present innovative AI conceptual layouts and working prototypes designed to address frontline public health challenges.
+          </p>
+        </div>
+
+        <div class="bg-cyber-dark p-6 rounded-lg border border-slate-800">
+          <div class="text-cyan-400 text-2xl mb-3"><i class="fa-solid fa-file-lines"></i></div>
+          <h3 class="text-xl font-bold text-white mb-2">Research Paper Presentations</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Showcase original research, systematic reviews, and analytical models through oral papers and digital poster presentations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="workshop" class="py-16 bg-cyber-dark/60 border-y border-cyan-500/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-cyber-card rounded-2xl p-8 sm:p-10 glow-border w-full">
+        
+        <div class="mb-8 border-b border-cyan-500/20 pb-4">
+          <span class="bg-cyan-950 text-cyan-400 border border-cyan-500/50 text-xs font-bold px-3 py-1 rounded uppercase tracking-wider">
+            Hands-on Workshop
+          </span>
+          <h2 class="text-3xl font-extrabold text-white mt-3 glow-text">Navigating AI for Medical Research</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-slate-300">
+          <ul class="space-y-4 text-sm">
+            <li class="flex items-start">
+              <i class="fa-solid fa-microchip text-cyan-400 mt-1 mr-3"></i>
+              <span><strong>Prompt Engineering:</strong> Best practices for precise query design in research.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-scale-balanced text-cyan-400 mt-1 mr-3"></i>
+              <span><strong>Fair Use of AI:</strong> Declarations, bias mitigation, and ethical considerations.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-brain text-cyan-400 mt-1 mr-3"></i>
+              <span><strong>Brainstorming & Literature:</strong> Conceptualizing research ideas and summarizing evidence.</span>
+            </li>
+          </ul>
+
+          <ul class="space-y-4 text-sm">
+            <li class="flex items-start">
+              <i class="fa-solid fa-chart-pie text-cyan-400 mt-1 mr-3"></i>
+              <span><strong>Statistical Analysis:</strong> Leveraging AI tools for data interpretation and models.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-pen-nib text-cyan-400 mt-1 mr-3"></i>
+              <span><strong>Editing & Proofreading:</strong> AI-assisted manuscript formatting and refinement.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-certificate text-cyan-400 mt-1 mr-3"></i>
+              <span><strong>Hands-on Practice:</strong> Live dataset analysis and practical exercises.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="panels" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-extrabold text-white uppercase tracking-wider glow-text">Keynotes & Panel Discussions</h2>
+      <p class="text-cyan-400 text-xs mt-2 uppercase tracking-widest">Multi-sectoral discussions led by experts across the country</p>
+      <div class="w-16 h-1 bg-cyan-400 mx-auto mt-3"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <div class="bg-cyber-card p-8 rounded-xl glow-border">
+        <div class="flex items-center space-x-3 mb-4">
+          <div class="w-10 h-10 bg-cyan-950 border border-cyan-500/50 rounded-lg flex items-center justify-center text-cyan-400 text-xl font-bold">
+            <i class="fa-solid fa-microphone"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white uppercase tracking-wider">Keynote Addresses</h3>
+        </div>
+        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+          Eminent keynote speakers from leading national institutions and digital health leadership will deliver plenary lectures exploring:
+        </p>
+        <ul class="space-y-2.5 text-xs text-slate-400">
+          <li class="flex items-start"><i class="fa-solid fa-atom text-cyan-400 mt-0.5 mr-2"></i><span>Public Health Entrepreneurship and Innovation</span></li>
+          <li class="flex items-start"><i class="fa-solid fa-atom text-cyan-400 mt-0.5 mr-2"></i><span>Future of National Health Programs in an AI-Driven World</span></li>
+          <li class="flex items-start"><i class="fa-solid fa-atom text-cyan-400 mt-0.5 mr-2"></i><span>Global Health Governance and Digital Divide</span></li>
+          <li class="flex items-start"><i class="fa-solid fa-atom text-cyan-400 mt-0.5 mr-2"></i><span>Big Data Analytics and Precision Public Health</span></li>
+        </ul>
+      </div>
+
+      <div class="bg-cyber-card p-8 rounded-xl glow-border">
+        <div class="flex items-center space-x-3 mb-4">
+          <div class="w-10 h-10 bg-cyan-950 border border-cyan-500/50 rounded-lg flex items-center justify-center text-cyan-400 text-xl font-bold">
+            <i class="fa-solid fa-comments"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white uppercase tracking-wider">Panel Discussions</h3>
+        </div>
+        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+          Interactive panel forums bringing together medical researchers, data scientists, policy specialists, and industry pioneers:
+        </p>
+        <ul class="space-y-2.5 text-xs text-slate-400">
+          <li class="flex items-start"><i class="fa-solid fa-network-wired text-cyan-400 mt-0.5 mr-2"></i><span>AI solutions for Climate Change and Human Health</span></li>
+          <li class="flex items-start"><i class="fa-solid fa-network-wired text-cyan-400 mt-0.5 mr-2"></i><span>Industrial Safety & Disaster Risk Reduction</span></li>
+          <li class="flex items-start"><i class="fa-solid fa-network-wired text-cyan-400 mt-0.5 mr-2"></i><span>Health Systems & Implementation Research for deployment of AI-models</span></li>
+          <li class="flex items-start"><i class="fa-solid fa-network-wired text-cyan-400 mt-0.5 mr-2"></i><span>Applied Epidemiology & Digital Health Diagnostics</span></li>
+          <li class="flex items-start"><i class="fa-solid fa-network-wired text-cyan-400 mt-0.5 mr-2"></i><span>Medical and Public Health Education in AI-era</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="tracks" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-cyan-500/20">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-extrabold text-white uppercase tracking-wider glow-text">Focus Tracks & Domains</h2>
+      <p class="text-cyan-400 text-xs mt-2 uppercase tracking-widest">Key areas covered across workshop & pitching tracks</p>
+      
+      <div class="mt-4 bg-cyan-950/40 border border-cyan-500/30 text-cyan-200 text-xs sm:text-sm px-4 py-2.5 rounded-lg max-w-3xl mx-auto">
+        <i class="fa-solid fa-circle-info text-cyan-400 mr-2"></i>
+        <strong>Note:</strong> Participants are welcome to make submissions in any relevant public health & AI domains other than the focus domains listed below.
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="p-5 bg-cyber-card rounded-xl border border-slate-800 hover:border-cyan-500/50 transition">
+        <h4 class="font-bold text-white mb-1"><i class="fa-solid fa-laptop-medical text-cyan-400 mr-2"></i>Diagnostics & Digital Health</h4>
+        <p class="text-xs text-slate-400">Applied epidemiology, point-of-care tools, and AI-driven diagnostics in Public Health.</p>
+      </div>
+      <div class="p-5 bg-cyber-card rounded-xl border border-slate-800 hover:border-cyan-500/50 transition">
+        <h4 class="font-bold text-white mb-1"><i class="fa-solid fa-earth-americas text-cyan-400 mr-2"></i>Climate Change & Human Health</h4>
+        <p class="text-xs text-slate-400">Environmental health, Predictive modeling, Climate adaptation strategies.</p>
+      </div>
+      <div class="p-5 bg-cyber-card rounded-xl border border-slate-800 hover:border-cyan-500/50 transition">
+        <h4 class="font-bold text-white mb-1"><i class="fa-solid fa-shield-virus text-cyan-400 mr-2"></i>Outbreaks & Disaster Risk Reduction</h4>
+        <p class="text-xs text-slate-400">Epidemiological surveillance, emergency response systems, and community resilience.</p>
+      </div>
+      <div class="p-5 bg-cyber-card rounded-xl border border-slate-800 hover:border-cyan-500/50 transition">
+        <h4 class="font-bold text-white mb-1"><i class="fa-solid fa-chart-line text-cyan-400 mr-2"></i>One Health and Antimicrobial Resistance</h4>
+        <p class="text-xs text-slate-400">AI-model based interventions for addressing antimicrobial resistance through One Health approaches.</p>
+      </div>
+      <div class="p-5 bg-cyber-card rounded-xl border border-slate-800 hover:border-cyan-500/50 transition">
+        <h4 class="font-bold text-white mb-1"><i class="fa-solid fa-graduation-cap text-cyan-400 mr-2"></i>Medical and Public Health Education</h4>
+        <p class="text-xs text-slate-400">Transforming public health education and training workflows in the AI-era.</p>
+      </div>
+      <div class="p-5 bg-cyber-card rounded-xl border border-slate-800 hover:border-cyan-500/50 transition">
+        <h4 class="font-bold text-white mb-1"><i class="fa-solid fa-rocket text-cyan-400 mr-2"></i>Health Promotion and Communication</h4>
+        <p class="text-xs text-slate-400">Effective communication using AI models, enhancing workplace and industrial safety.</p>
+      </div>
+    </div>
+
+    <div id="academic-guidelines" class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+      <div class="bg-cyber-card p-6 rounded-xl glow-border">
+        <h3 class="text-xl font-bold text-cyan-300 mb-4 flex items-center">
+          <i class="fa-solid fa-bullhorn text-cyan-400 mr-3"></i>Idea Pitching Contest Instructions
+        </h3>
+        <ul class="space-y-3 text-sm text-slate-300">
+          <li class="flex items-start"><i class="fa-solid fa-chevron-right text-cyan-400 mt-1 mr-2 text-xs"></i><span><strong>Team Size:</strong> Teams of 3 members (interdisciplinary teams preferred).</span></li>
+          <li class="flex items-start"><i class="fa-solid fa-chevron-right text-cyan-400 mt-1 mr-2 text-xs"></i><span><strong>Abstract Submission:</strong> Submit a 300-word layout of your idea (Problem expected to be addressed, brief description of AI model, pilot results (if applicable)).</span></li>
+          <li class="flex items-start"><i class="fa-solid fa-chevron-right text-cyan-400 mt-1 mr-2 text-xs"></i><span><strong>Preliminary Round:</strong> Initial presentation/pitch evaluation by expert jury.</span></li>
+          <li class="flex items-start"><i class="fa-solid fa-chevron-right text-cyan-400 mt-1 mr-2 text-xs"></i><span><strong>Final Round:</strong> Working prototype/model demonstration.</span></li>
+          <li class="flex items-start"><i class="fa-solid fa-trophy text-amber-400 mt-1 mr-2 text-xs"></i><span>Exciting awards and prizes for winners in each category.</span></li>
+        </ul>
+      </div>
+
+      <div class="bg-cyber-card p-6 rounded-xl glow-border">
+        <h3 class="text-xl font-bold text-cyan-300 mb-4 flex items-center">
+          <i class="fa-solid fa-file-code text-cyan-400 mr-3"></i>Paper Presentation Instructions
+        </h3>
+        <ul class="space-y-3 text-sm text-slate-300">
+          <li class="flex items-start"><i class="fa-solid fa-chevron-right text-cyan-400 mt-1 mr-2 text-xs"></i><span><strong>Categories:</strong> Oral Research Presentations and Scientific Poster Showcases.</span></li>
+          <li class="flex items-start"><i class="fa-solid fa-chevron-right text-cyan-400 mt-1 mr-2 text-xs"></i><span><strong>Abstract Format:</strong> Structured abstract (Background, Methods, Results, Conclusion) up to 250 words.</span></li>
+          <li class="flex items-start"><i class="fa-solid fa-chevron-right text-cyan-400 mt-1 mr-2 text-xs"></i><span><strong>Review Process:</strong> Peer-reviewed selection by the Scientific Committee.</span></li>
+          <li class="flex items-start"><i class="fa-solid fa-chevron-right text-cyan-400 mt-1 mr-2 text-xs"></i><span><strong>Publication:</strong> Accepted abstracts will be published in the conclave souvenir proceedings.</span></li>
+          <li class="flex items-start"><i class="fa-solid fa-award text-amber-400 mt-1 mr-2 text-xs"></i><span>Best Paper and Best Poster awards presented during valedictory session.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="registration" class="bg-cyber-dark py-16 border-t border-cyan-500/20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-extrabold text-white uppercase tracking-wider glow-text">Registration Categories</h2>
+        <p class="text-cyan-400 text-xs mt-1">Group registrations will be considered for a discount. Contact organising team for group registrations.</p>
+      </div>
+
+      <div class="overflow-x-auto rounded-xl border border-cyan-500/30">
+        <table class="w-full text-left border-collapse text-sm">
+          <thead>
+            <tr class="bg-cyber-card text-cyan-300 border-b border-cyan-500/30 uppercase text-xs">
+              <th rowspan="2" class="p-4 font-bold border-r border-cyan-500/20 align-middle">Category</th>
+              <th rowspan="2" class="p-4 font-bold text-center border-r border-cyan-500/20 align-middle">Workshop</th>
+              <th colspan="2" class="p-3 font-bold text-center border-b border-cyan-500/20">Conference</th>
+            </tr>
+            <tr class="bg-cyber-card/80 text-cyan-200 border-b border-cyan-500/30 text-[11px]">
+              <th class="p-2 text-center border-r border-cyan-500/20">
+                Early Bird<br/>
+                <span class="text-[10px] text-slate-400 font-normal lowercase">(up to October 15, 2026)</span>
+              </th>
+              <th class="p-2 text-center">
+                Late Bird<br/>
+                <span class="text-[10px] text-slate-400 font-normal lowercase">(up to December 13, 2026)</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800 bg-cyber-black/80">
+            <tr class="hover:bg-cyan-950/30 transition">
+              <td class="p-4 font-medium text-white border-r border-slate-800">Undergraduate students from any discipline</td>
+              <td class="p-4 text-center text-cyan-200 font-semibold border-r border-slate-800">₹1000</td>
+              <td class="p-4 text-center text-cyan-300 font-semibold border-r border-slate-800">₹2000</td>
+              <td class="p-4 text-center text-cyan-400 font-bold">₹3000</td>
+            </tr>
+            <tr class="hover:bg-cyan-950/30 transition">
+              <td class="p-4 font-medium text-white border-r border-slate-800">Medical residents, PhD scholars, PG students (other disciplines)</td>
+              <td class="p-4 text-center text-cyan-200 font-semibold border-r border-slate-800">₹2000</td>
+              <td class="p-4 text-center text-cyan-300 font-semibold border-r border-slate-800">₹4000</td>
+              <td class="p-4 text-center text-cyan-400 font-bold">₹5000</td>
+            </tr>
+            <tr class="hover:bg-cyan-950/30 transition">
+              <td class="p-4 font-medium text-white border-r border-slate-800">Faculty/Professionals from other disciplines/Independent researchers</td>
+              <td class="p-4 text-center text-cyan-200 font-semibold border-r border-slate-800">₹2000</td>
+              <td class="p-4 text-center text-cyan-300 font-semibold border-r border-slate-800">₹5000</td>
+              <td class="p-4 text-center text-cyan-400 font-bold">₹6000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="mt-8 bg-cyber-card border border-slate-800 p-6 rounded-xl flex flex-col md:flex-row justify-between items-center gap-6">
+        <div>
+          <h4 class="text-sm font-bold text-cyan-300 uppercase tracking-wider">Payment Details</h4>
+          <p class="text-xs text-slate-400 mt-1">Account Name: <strong class="text-white">AIIMS MG - CFM PROGRAMS</strong> | A/C No: <strong class="text-white">43551252871</strong></p>
+          <p class="text-xs text-slate-400">Bank: <strong class="text-white">State Bank of India, AIIMS Mangalagiri</strong> | IFSC: <strong class="text-white">SBIN0061485</strong></p>
+        </div>
+
+        <a href="https://forms.gle/t6LttjHPHdzeosSs6" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="whitespace-nowrap bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-black font-extrabold px-6 py-3.5 rounded-lg shadow-[0_0_20px_rgba(0,242,254,0.4)] transition uppercase text-xs tracking-wider flex items-center gap-2">
+          <span>Register Now</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+        </a>
+      </div>
+      <div class="text-xs text-slate-400">
+          * Fee covers course material, kit, lunch & refreshments for registered days.
+      </div>
+    </div>
+  </section>
+
+
+  <section id="contact" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-cyan-500/20">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-extrabold text-white uppercase tracking-wider glow-text">Contact Us</h2>
+      <p class="text-cyan-400 text-xs mt-1 uppercase tracking-widest">For inquiries, registration & submission support</p>
+      <div class="w-16 h-1 bg-cyan-400 mx-auto mt-2"></div>
+    </div>
+
+    <div class="bg-cyber-card rounded-xl p-8 glow-border max-w-4xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
+        
+        <div class="p-4 bg-cyber-dark rounded-lg border border-slate-800">
+          <div class="text-cyan-400 text-xl mb-2"><i class="fa-solid fa-user-gear"></i></div>
+          <h4 class="text-sm font-bold text-white uppercase mb-1">Organising Secretary</h4>
+          <p class="text-xs text-cyan-300 font-semibold">Dr. Pritish Baskaran T B</p>
+          <p class="text-xs text-slate-400 mt-1">Assistant Professor, Dept. of CFM</p>
+          <p class="text-xs text-cyan-300 font-semibold">+91-8610361238</p>
+        </div>
+
+        <div class="p-4 bg-cyber-dark rounded-lg border border-slate-800">
+          <div class="text-cyan-400 text-xl mb-2"><i class="fa-solid fa-user-gear"></i></div>
+          <h4 class="text-sm font-bold text-white uppercase mb-1">Nodal Persons</h4>
+          <p class="text-xs text-cyan-300 font-semibold">Dr. Joe Amalan & Dr. Sivanthiga G</p>
+          <p class="text-xs text-slate-400 mt-1">Senior Residents, Dept. of CFM</p>
+          <p class="text-xs text-cyan-300 font-semibold">+91-9500874376 & +91-7373057587</p>
+          
+        </div>
+
+        <div class="p-4 bg-cyber-dark rounded-lg border border-slate-800">
+          <div class="text-cyan-400 text-xl mb-2"><i class="fa-solid fa-envelope"></i></div>
+          <h4 class="text-sm font-bold text-white uppercase mb-1">Email Inquiry</h4>
+          <p class="text-xs text-cyan-300 font-semibold">aipublichealthaiimsmg@gmail.com</p>
+          <p class="text-xs text-slate-400 mt-1">Response time: 1-2 days</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="team" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-cyan-500/20">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-extrabold text-white uppercase tracking-wider glow-text">Organizing Team</h2>
+      <div class="w-16 h-1 bg-cyan-400 mx-auto mt-2"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.5fr_2fr_1.5fr] gap-6 mb-10">
+      
+      <div class="bg-cyber-card p-5 rounded-xl border border-cyan-500/30">
+        <h3 class="font-bold text-cyan-400 uppercase tracking-wider mb-3">Patrons</h3>
+        <ul class="space-y-2 text-slate-300 text-sm sm:text-base">
+          <li><strong>Maj. Gen. Dr. Tapan Kumar Saha</strong><br/><span class="text-slate-400">President, AIIMS Mangalagiri</span></li>
+          <li><strong>Prof. Dr. Ahanthem Santa Singh</strong><br/><span class="text-slate-400">Executive Director, AIIMS Mangalagiri</span></li>
+        </ul>
+      </div>
+
+      <div class="bg-cyber-card p-5 rounded-xl border border-slate-800">
+        <h3 class="font-bold text-cyan-400 uppercase tracking-wider mb-3">Co-Patrons</h3>
+        <ul class="space-y-1.5 text-slate-300 text-sm sm:text-base">
+          <li class="whitespace-nowrap"><strong>Prof. Dr. Desu Rama Mohan</strong> (Dean Academics)</li>
+          <li class="whitespace-nowrap"><strong>Prof. Dr. Joy A Ghoshal</strong> (Dean Research)</li>
+          <li class="whitespace-nowrap"><strong>Prof. Dr. Sushil Sharma</strong> (Dean Examination)</li>
+          <li class="whitespace-nowrap"><strong>Prof. Dr. Deepti Vepakomma</strong> (Dean Student Welfare)</li>
+          <li class="whitespace-nowrap"><strong>Prof. Dr. Rajashekar Mohan</strong> (Medical Superintendent)</li>
+        </ul>
+      </div>
+
+      <div class="bg-cyber-card p-5 rounded-xl border border-cyan-500/30">
+        <h3 class="font-bold text-cyan-400 uppercase tracking-wider mb-3">Conclave Leadership</h3>
+        <div class="space-y-3 text-slate-300 text-sm sm:text-base">
+          <div>
+            <span class="text-slate-400 block uppercase text-[10px]">Chairperson</span>
+            <strong>Prof. Dr. Rajeev Aravindakshan</strong>
+            <p class="text-slate-400">Head of Department, CFM</p>
+          </div>
+          <div>
+            <span class="text-slate-400 block uppercase text-[10px]">Organising Secretary</span>
+            <strong>Dr. Pritish Baskaran T B</strong>
+            <p class="text-slate-400">Assistant Professor, CFM</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_2fr] gap-6 text-sm sm:text-base">
+
+      <div class="bg-cyber-card p-5 rounded-xl border border-slate-800">
+        <h4 class="font-bold text-cyan-300 uppercase tracking-wider mb-2">Scientific Committee</h4>
+        <ul class="space-y-1 text-slate-300">
+          <li class="whitespace-nowrap">Dr. Kalaiselvan G, Professor, CFM</li>
+          <li class="whitespace-nowrap">Dr. Dhrubajyoti J Debnath, Additional Prof., CFM</li>
+          <li class="whitespace-nowrap">Dr. Sathiyanarayanan S, Additional Prof., CFM</li>
+          <li class="whitespace-nowrap">Dr. Arti Gupta Reddy, Additional Prof., CFM</li>
+          <li class="whitespace-nowrap">Dr. Venkatashiva Reddy, Associate Prof., CFM</li>
+          <li class="whitespace-nowrap">Dr. Navya Krishna Naidu, Assistant Prof., CFM</li>
+        </ul>
+      </div>
+
+      <div class="bg-cyber-card p-5 rounded-xl border border-slate-800">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div>
+            <h5 class="font-semibold text-cyan-300 uppercase tracking-wider">Senior Residents</h5>
+            <ul class="space-y-1 text-slate-300">
+              <li>Dr. Rashmitha Priyadarsini</li>
+              <li>Dr. Anantha Prakash V</li>
+              <li>Dr. Joe Amalan</li>
+              <li>Dr. Kishore Eswaramoorthi</li>
+              <li>Dr. Prathyusha L</li>
+              <li>Dr. Sivanthiga G</li>
+              <li>Dr. Hashini</li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 class="font-semibold text-cyan-300 uppercase tracking-wider">Junior Residents</h5>
+            <ul class="space-y-1 text-slate-300">
+              <li>Dr. Sreelakshmi M</li>
+              <li>Dr. Vijay Kishore</li>
+              <li>Dr. Vignesh</li>
+              <li>Dr. Subitsha</li>
+              <li>Dr. Praveen</li>
+              <li>Dr. Likhitha</li>
+              <li>Dr. Chandru</li>
+              <li>Dr. Kruti K</li>
+              <li>Dr. Haveela</li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 class="font-semibold text-cyan-300 uppercase tracking-wider">Tutors</h5>
+            <ul class="space-y-1 text-slate-300">
+              <li>Dr. Sai Sreenivas</li>
+              <li>Dr. Gulshan Basha</li>
+              <li>Dr. Priscilla Roy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="bg-cyber-black border-t border-cyan-500/20 py-8 text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
+      <p class="text-slate-400">
+        Department of Community & Family Medicine | AIIMS Mangalagiri, Andhra Pradesh, India.
+      </p>
+      <p>© 2026 AIIMS Mangalagiri. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
