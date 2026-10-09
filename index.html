@@ -1,1551 +1,566 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>National Conclave on Artificial Intelligence for Public Health | AIIMS Mangalagiri</title>
-  
-  <!-- Google Fonts: Editorial & Poetic Serif + Clean Sans -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
-  
-  <!-- FontAwesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-  <!-- Tailwind CSS via CDN -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>National Conclave on AI for Public Health | AIIMS Mangalagiri</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: {
-            serif: ['"Playfair Display"', 'Georgia', 'serif'],
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-          },
           colors: {
-            paper: '#FAF8F5',
-            mist: '#F0F5F7',
-            dawn: {
-              50: '#F4F9FA',
-              100: '#E4EFF2',
-              200: '#C7DFE5',
-              600: '#2E6977',
-              800: '#1D454F',
-              900: '#133037',
-            },
-            sage: {
-              100: '#EBF2EE',
-              500: '#3D7359',
-              700: '#284D3B',
-            },
-            gold: {
-              100: '#FCF7E8',
-              500: '#C89333',
-              600: '#A97521',
-            }
-          },
-          animation: {
-            'gentle-pulse': 'pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-            'float-subtle': 'float 4s ease-in-out infinite',
-          },
-          keyframes: {
-            float: {
-              '0%, 100%': { transform: 'translateY(0px)' },
-              '50%': { transform: 'translateY(-6px)' },
+            cyber: {
+              black: '#050811',
+              dark: '#0a0f1d',
+              card: '#111827',
+              cyan: '#00f2fe',
+              blue: '#4facfe',
+              neon: '#06b6d4'
             }
           }
         }
       }
     }
   </script>
+  <style>
+    .glow-border {
+      box-shadow: 0 0 15px rgba(6, 182, 212, 0.25);
+      border: 1px solid rgba(6, 182, 212, 0.4);
+    }
+    .glow-border:hover {
+      box-shadow: 0 0 25px rgba(6, 182, 212, 0.5);
+      border: 1px solid rgba(6, 182, 212, 0.8);
+    }
+    .glow-text {
+      text-shadow: 0 0 12px rgba(0, 242, 254, 0.6);
+    }
+    .bg-grid {
+      background-image: radial-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 0);
+      background-size: 30px 30px;
+    }
+  </style>
 </head>
+<body class="bg-cyber-black text-slate-200 font-sans antialiased bg-grid selection:bg-cyan-500 selection:text-black">
 
-<body class="bg-[#FAF8F5] text-slate-800 font-sans antialiased selection:bg-dawn-200 selection:text-dawn-900 relative overflow-x-hidden">
-
-  <!-- Navigation Bar -->
-  <nav class="sticky top-0 z-50 bg-[#FAF8F5]/85 backdrop-blur-md border-b border-dawn-200/80 transition-all">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
-        
-        <!-- Left: Institute Logo as sketched -->
-        <a href="#" class="flex items-center gap-3">
-          <img src="logo.png" alt="AIIMS Mangalagiri Logo" class="h-14 sm:h-16 w-auto object-contain drop-shadow-sm hover:opacity-90 transition" onerror="this.src='https://upload.wikimedia.org/wikipedia/en/e/e0/AIIMS_Mangalagiri_Logo.png'" />
-          <div class="hidden sm:block">
-            <span class="block text-xs uppercase tracking-widest text-slate-500 font-semibold">AIIMS Mangalagiri</span>
-            <span class="block text-sm font-bold text-dawn-900">Dept. of Community & Family Medicine</span>
-          </div>
-        </a>
-
-        <!-- Nav Links -->
-        <div class="hidden md:flex items-center gap-4 lg:gap-5 xl:gap-5 text-xs xl:text-sm font-semibold text-slate-700 whitespace-nowrap">
-          <a href="#workshop" class="hover:text-dawn-600 transition">Workshop</a>
-          <a href="#academic-events" class="hover:text-dawn-600 transition">Academic Events</a>
-          <a href="#tracks" class="hover:text-dawn-600 transition">Focus Tracks</a>
-          <a href="#sessions" class="hover:text-dawn-600 transition">Scientific Sessions</a>
-          <a href="#speakers" class="hover:text-dawn-600 transition">Speakers</a>
-          <a href="#registration" class="hover:text-dawn-600 transition">Registration</a>
-          <a href="#committee" class="hover:text-dawn-600 transition">Organising Team</a>
+  <nav class="sticky top-0 z-50 bg-cyber-dark/90 backdrop-blur-lg border-b border-cyan-500/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <div class="flex items-center space-x-3">
+        <div class="flex items-center justify-center">
+          <img src="AIIMS logo.png" alt="AIIMS Mangalagiri Logo" class="h-16 w-auto object-contain">
         </div>
-
+        <span class="text-xs uppercase tracking-widest text-cyan-400 font-semibold hidden sm:inline-block">AIIMS Mangalagiri</span>
       </div>
+
+      <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wide uppercase text-slate-300">
+        <a href="#about" class="hover:text-cyan-400 transition">Academic Events</a>
+        <a href="#workshop" class="hover:text-cyan-400 transition">Workshop</a>
+        <a href="#panels" class="hover:text-cyan-400 transition">Keynotes & Panels</a>
+        <a href="#tracks" class="hover:text-cyan-400 transition">Focus Domains</a>
+        <a href="#registration" class="hover:text-cyan-400 transition">Registration</a>
+        <a href="#contact" class="hover:text-cyan-400 transition">Contact Us</a>
+        <a href="#team" class="hover:text-cyan-400 transition">Organizing Team</a>
+      </div>
+
     </div>
   </nav>
 
-<!-- HERO SECTION (Tight Spacing, 50/50 Split, Giant Right-Side Mascots) -->
-  <header class="relative z-10 pt-6 pb-0 lg:pt-10 lg:pb-0 px-4 sm:px-6 lg:px-8 border-b border-dawn-200/60 bg-gradient-to-b from-mist/70 to-paper overflow-hidden">
-    <div class="max-w-7xl mx-auto">
+  <header class="relative bg-gradient-to-b from-cyber-dark via-cyber-black to-cyber-black py-24 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-cyan-500/20">
+    <div class="max-w-5xl mx-auto text-center space-y-8 relative z-10">
       
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-4 items-end">
-        
-        <!-- LEFT COLUMN: Conclave Details & CTA Buttons (Span 6 cols, padded for breathing room) -->
-        <div class="lg:col-span-6 text-left space-y-5 pb-10 lg:pb-16 z-20">
-          
-          <!-- Category Badge -->
-          <div class="inline-block px-3.5 py-1 rounded-full bg-sage-100 border border-sage-500/20 text-sage-700 text-s font-bold uppercase tracking-wider">
-            National Conclave on
-          </div>
-
-          <!-- Conference Title -->
-          <h1 class="font-serif text-3xl sm:text-5xl lg:text-5xl xl:text-6xl font-extrabold text-dawn-900 leading-tight">
-            Artificial Intelligence <br/>
-            <span class="italic font-normal text-dawn-600">for</span> Public Health
-          </h1>
-
-          <!-- Theme Tagline -->
-          <div class="border-l-2 border-dawn-600 pl-4 py-0.5 space-y-0.5">
-            <p class="text-[11px] uppercase tracking-widest text-slate-500 font-bold">
-              A Multi-Sectoral Confluence
-            </p>
-            <p class="font-serif italic text-base sm:text-lg lg:text-xl text-dawn-800 font-semibold">
-              “Pitching Solutions, Empowering Communities”
-            </p>
-
-          </div>
-
-          <!-- Date & Venue -->
-          <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 text-slate-700 pt-1">
-            <span class="text-lg sm:text-xl lg:text-2xl font-bold tracking-tight text-slate-900 flex items-center gap-2">
-              <i class="fa-regular fa-calendar text-dawn-600"></i> 14 – 16 December 2026
-            </span>
-          </div>
-
-          <!-- Early Bird Centered Flashing Box -->
-          <div class="w-full max-w-md bg-gradient-to-r from-amber-50 via-gold-100 to-amber-50 border-2 border-dashed border-gold-500/80 rounded-xl p-3 text-center animate-gentle-pulse shadow-sm">
-            <div class="flex items-center justify-center gap-2.5 text-gold-600 font-black text-xs sm:text-sm tracking-wide uppercase">
-              <i class="fa-solid fa-bell text-base"></i>
-              <span>Early Bird Closing Soon: October 15, 2026</span>
-            </div>
-          </div>
-
-          <!-- In-Line Action Buttons -->
-          <div class="pt-2 flex flex-col sm:flex-row items-center sm:items-stretch gap-3">
-            
-            <!-- Circular "REGISTER NOW" CTA Button -->
-            <a href="https://forms.gle/t6LttjHPHdzeosSs6" target="_blank" rel="noopener noreferrer"
-               class="group relative flex-shrink-0 w-28 h-28 sm:w-32 sm:h-32 rounded-full border-2 border-dawn-600/50 bg-dawn-800 hover:bg-dawn-900 text-white flex flex-col items-center justify-center text-center p-2 shadow-lg hover:scale-105 transition transform">
-              <span class="text-xs sm:text-sm font-black uppercase tracking-tight leading-tight">Register<br/>Now</span>
-            </a>
-
-            <!-- Workshop & Abstract Submission Buttons -->
-            <div class="flex flex-col justify-between w-full max-w-sm gap-2">
-              <a href="https://forms.gle/gCy8Vt5EhoQpjUrD6" target="_blank" rel="noopener noreferrer"
-                 class="flex items-center justify-center gap-3 bg-white hover:bg-dawn-50 border border-dawn-600/30 text-dawn-900 font-bold px-4 py-3 rounded-xl shadow-sm hover:shadow transition text-sm">
-                <i class="fa-solid fa-laptop-code text-dawn-600"></i>
-                <span>Register for Workshop</span>
-              </a>
-
-              <a href="https://forms.gle/KVrRbGugvKt4zfQJ8" target="_blank" rel="noopener noreferrer"
-                 class="flex items-center justify-center gap-3 bg-white hover:bg-dawn-50 border border-dawn-600/30 text-dawn-900 font-bold px-4 py-3 rounded-xl shadow-sm hover:shadow transition text-sm">
-                <i class="fa-regular fa-file-lines text-dawn-600"></i>
-                <span>Abstract Submission</span>
-              </a>
-            </div>
-
-          </div>
-
-          <p class="text-[11px] text-slate-500 italic">
-            *Please complete Conclave registration to receive your Unique ID, before abstract submission.
-          </p>
-
-        </div>
-
-        <!-- RIGHT COLUMN: Giant Floor-Anchored Mascots (Span 6 cols, Minimal Margins) -->
-        <div class="lg:col-span-6 flex justify-center lg:justify-end items-end relative lg:-mr-6 xl:-mr-12 -mb-1">
-          <div class="flex items-end justify-center lg:justify-end select-none pointer-events-none">
-            
-            <!-- Mascot Dot (Extra Large) -->
-            <div class="flex flex-col items-center">
-              <img 
-                src="dot.png" 
-                alt="Mascot Dot" 
-                class="h-80 sm:h-[26rem] md:h-[30rem] lg:h-[36rem] xl:h-[40rem] 2xl:h-[44rem] w-auto object-contain object-bottom drop-shadow-md" 
-              />
-            </div>
-
-            <!-- Mascot Pip (Extra Large, Natural Overlap) -->
-            <div class="flex flex-col items-center -ml-12 sm:-ml-16 md:-ml-20 lg:-ml-24 xl:-ml-28 z-10">
-              <img 
-                src="pip.png" 
-                alt="Mascot Pip" 
-                class="h-80 sm:h-[26rem] md:h-[30rem] lg:h-[36rem] xl:h-[40rem] 2xl:h-[44rem] w-auto object-contain object-bottom drop-shadow-md" 
-              />
-            </div>
-
-          </div>
-        </div>
-
+      <div class="inline-block">
+        <span class="text-lg sm:text-2xl font-black uppercase tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-blue-500 glow-text block mb-2">
+          "Pitching Solutions, Empowering Communities"
+        </span>
+        <div class="h-0.5 w-3/4 mx-auto bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
       </div>
 
+      <div>
+        <span class="text-2xl sm:text-4xl font-extrabold tracking-wider text-cyan-300 bg-cyan-950/60 border border-cyan-500/40 px-6 py-2 rounded-full inline-block shadow-[0_0_20px_rgba(0,242,254,0.2)]">
+          <i class="fa-solid fa-calendar-days mr-3 text-cyan-400"></i>14–16 December 2026
+        </span>
+      </div>
+
+      <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-tight uppercase text-white">
+        National Conclave on <br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Artificial Intelligence</span> <br/>
+        For Public Health
+      </h1>
+
+      <p class="text-cyan-200/80 text-sm sm:text-lg max-w-3xl mx-auto uppercase tracking-wide border-t border-b border-cyan-500/20 py-3">
+        Dept. of Community & Family Medicine, AIIMS Mangalagiri
+      </p>
+      <p class="text-lg text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">
+        A MULTI-SECTORAL CONFLUENCE <br/>  
+        navigating artificial intelligence for public health solutions.
+      </p>
+
+     <div class="pt-6 flex flex-col items-center gap-3.5">
+  <!-- First Line: Conclave Registration & Abstract Submission -->
+  <div class="flex flex-col sm:flex-row justify-center gap-4 w-full">
+    <a href="https://forms.gle/t6LttjHPHdzeosSs6" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-black font-bold px-8 py-3.5 rounded-md shadow-[0_0_20px_rgba(0,242,254,0.4)] transition text-center">
+      Register for Conclave
+    </a>
+    <a href="https://forms.gle/KVrRbGugvKt4zfQJ8" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="bg-cyber-card border border-cyan-500/40 hover:border-cyan-400 text-cyan-300 font-semibold px-8 py-3.5 rounded-md transition text-center">
+      Submit Abstract
+    </a>
+  </div>
+       
+  <div class="flex justify-center w-full">
+    <a href="https://forms.gle/gCy8Vt5EhoQpjUrD6" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 font-bold px-8 py-3.5 rounded-md shadow-[0_0_20px_rgba(251,191,36,0.45)] transition text-center">
+      Register for Workshop
+    </a>
+  </div>
+</div>
+        
+      <div class="mt-4 inline-flex items-center gap-2 bg-amber-500/10 border border-amber-400/40 text-amber-300 px-5 py-2 rounded-full text-xs sm:text-sm font-semibold tracking-wide shadow-[0_0_15px_rgba(251,191,36,0.2)]">
+        <i class="fa-solid fa-clock text-amber-400"></i>
+        <span><strong>Last day to submit abstracts:</strong> 15 November 2026</span>
+      </div>
+        
+       <div class="mt-4 bg-cyan-950/40 border border-cyan-500/30 text-cyan-200 text-xs sm:text-sm px-4 py-2.5 rounded-lg max-w-3xl mx-auto">
+        <i class="fa-solid fa-circle-info text-cyan-400 mr-2"></i>
+        <strong>Note:</strong> Upon registration for the conclave, the participants will receive a unique ID to their registered e-mail address. Please proceed to abstract submission for academic events only after receiving your unique ID. Registration for pre-conference workshop can be done separately. 
+      </div>
     </div>
   </header>
 
-    <!-- HANDS-ON WORKSHOP (Full Width Section as requested) -->
-  <section id="workshop" class="py-16 bg-white border-b border-dawn-200/70">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <span class="text-xs font-bold tracking-widest text-dawn-600 uppercase">Pre-Conference Workshop</span>
-        <span class="text-xs font-bold tracking-widest text-dawn-600 uppercase">(14 December 2026)</span>
-        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-dawn-900 mt-1">Navigating Artificial Intelligence</h2>
-        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-dawn-900 mt-1">for Medical Research</h2>
-        <p class="text-slate-700 text-sm sm:text-base mt-2">Comprehensive masterclass for clinicians, healthcare researchers, scholars, students and residents</p>
-      </div>
+  <section id="about" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-extrabold text-white uppercase tracking-wider glow-text">Academic Events</h2>
+      <div class="w-16 h-1 bg-cyan-400 mx-auto mt-2"></div>
+    </div>
 
-      <!-- Two-Column Layout -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        
-        <div class="bg-mist/50 border border-dawn-200 rounded-2xl p-6 sm:p-8 space-y-4">
-          <h3 class="font-serif text-xl font-bold text-dawn-900 flex items-center gap-2">
-            <i class="fa-solid fa-pen-ruler text-dawn-600"></i> Prompting & Evidence Synthesis
-          </h3>
-          <ul class="space-y-3 text-sm text-slate-700">
-            <li class="flex items-start gap-2.5">
-              <i class="fa-regular fa-circle-check text-emerald-600 mt-1"></i>
-              <span><strong>Prompt Engineering:</strong> Best practices for framing research questions.</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <i class="fa-regular fa-circle-check text-emerald-600 mt-1"></i>
-              <span><strong>Evidence Retrieval:</strong> Summarising dense biomedical literature rapidly.</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <i class="fa-regular fa-circle-check text-emerald-600 mt-1"></i>
-              <span><strong>Brainstorming Ideas:</strong> Designing hypothesis-driven scientific methodologies.</span>
-            </li>
-          </ul>
+    <div class="bg-cyber-card rounded-xl p-8 glow-border">
+      <p class="text-slate-300 text-lg leading-relaxed text-center max-w-4xl mx-auto mb-8">
+        The National Conclave features high-impact academic forums designed to foster interdisciplinary innovations. The event includes an <strong class="text-cyan-400">Idea-Pitching Contest for AI-based models in public health</strong>, <br/> 
+        alongside competitive <strong class="text-cyan-400">Research Paper Presentations (Oral & Poster)</strong>.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-cyber-dark p-6 rounded-lg border border-slate-800">
+          <div class="text-cyan-400 text-2xl mb-3"><i class="fa-solid fa-lightbulb"></i></div>
+          <h3 class="text-xl font-bold text-white mb-2">Idea Pitching Contest</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Present innovative AI conceptual layouts and working prototypes designed to address frontline public health challenges.
+          </p>
         </div>
 
-        <div class="bg-mist/50 border border-dawn-200 rounded-2xl p-6 sm:p-8 space-y-4">
-          <h3 class="font-serif text-xl font-bold text-dawn-900 flex items-center gap-2">
-            <i class="fa-solid fa-chart-line text-dawn-600"></i> Analysis, Ethics & Governance
-          </h3>
-          <ul class="space-y-3 text-sm text-slate-700">
-            <li class="flex items-start gap-2.5">
-              <i class="fa-regular fa-circle-check text-emerald-600 mt-1"></i>
-              <span><strong>Statistical Interpretation:</strong> Interpreting outputs, graphs, and epidemiological trends.</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <i class="fa-regular fa-circle-check text-emerald-600 mt-1"></i>
-              <span><strong>Fair Use & Ethics:</strong> Declaring AI use, mitigating demographic bias, and ensuring reproducibility.</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <i class="fa-regular fa-circle-check text-emerald-600 mt-1"></i>
-              <span><strong>Scientific Writing:</strong> Formatting, editing, and adhering to international journal standards.</span>
-            </li>
-          </ul>
+        <div class="bg-cyber-dark p-6 rounded-lg border border-slate-800">
+          <div class="text-cyan-400 text-2xl mb-3"><i class="fa-solid fa-file-lines"></i></div>
+          <h3 class="text-xl font-bold text-white mb-2">Research Paper Presentations</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Showcase original research, systematic reviews, and analytical models through oral papers and digital poster presentations.
+          </p>
         </div>
-
       </div>
     </div>
   </section>
 
-    <!-- ACADEMIC EVENTS & COMPETITIONS -->
-  <section id="academic-events" class="py-16 bg-[#FAF8F5] border-b border-dawn-200/70">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    </section>
+
+  <section id="tracks" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-cyan-500/20">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-extrabold text-white uppercase tracking-wider glow-text">Focus Tracks & Domains</h2>
+      <p class="text-cyan-400 text-xs mt-2 uppercase tracking-widest">Key areas covered across Academic Events</p>
       
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-dawn-900 mt-1">Academic Events</h2>
-        <p class="text-slate-600 text-sm mt-2">(15 & 16 December 2026) </p>
-        <p class="text-slate-600 text-sm mt-2">Showcase your research and transform concepts into deployable public health models.</p>
+      <div class="mt-4 bg-cyan-950/40 border border-cyan-500/30 text-cyan-200 text-xs sm:text-sm px-4 py-2.5 rounded-lg max-w-3xl mx-auto">
+        <i class="fa-solid fa-circle-info text-cyan-400 mr-2"></i>
+        <strong>Note:</strong> Participants are welcome to make submissions in any relevant public health & AI domains other than the focus domains listed below.
       </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        
-        <!-- Idea Pitching Contest Card -->
-        <div class="bg-white border border-dawn-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition">
-          <div class="w-12 h-12 rounded-xl bg-dawn-100 flex items-center justify-center text-dawn-700 text-xl mb-4">
-            <i class="fa-solid fa-lightbulb"></i>
-          </div>
-          <h3 class="font-serif text-2xl font-bold text-dawn-900 mb-2">Idea Pitching Contest</h3>
-          <p class="text-sm text-slate-600 mb-4">Pitch AI-based conceptual frameworks or working prototypes for pressing community challenges.</p>
-          <ul class="text-xs sm:text-sm text-slate-700 space-y-2 mb-6">
-            <li>• Teams of 3 members.</li>
-            <li>• Submit a 300-word structured concept note (Problem to be addressed, brief description of AI model, pilot results (if applicable))</li>
-            <li>• Preliminary round: Initial presentation/pitch evaluation by expert jury</li>
-            <li>• Final round: Prototype demonstration & jury presentation.</li>
-          </ul>
-          <span class="inline-block text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-md">
-            Exciting Prizes and Awards for winners
-          </span>
-        </div>
-
-        <!-- Research Paper Presentations -->
-        <div class="bg-white border border-dawn-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition">
-          <div class="w-12 h-12 rounded-xl bg-dawn-100 flex items-center justify-center text-dawn-700 text-xl mb-4">
-            <i class="fa-solid fa-file-signature"></i>
-          </div>
-          <h3 class="font-serif text-2xl font-bold text-dawn-900 mb-2">Research Presentations</h3>
-          <p class="text-sm text-slate-600 mb-4">Oral and Poster presentations.</p>
-          <ul class="text-xs sm:text-sm text-slate-700 space-y-2 mb-6">
-            <li>• Structured abstract (Background, Methods, Results, Conclusion) up to 300 words </li>
-            <li>• Peer-reviewed selection by the Scientific Committee.</li>
-            <li>• Accepted submissions will be published in the conclave souvenir.</li>
-          </ul>
-          </a>
-        </div>
-            <p class="text-xs sm:text-sm text-slate-700">Abstract submission deadline: <strong>15 November 2026</strong>.</p>
-      </div>
-
     </div>
-  </section>
-
-  <!-- FOCUS DOMAINS -->
-  <section id="tracks" class="py-16 bg-white border-b border-dawn-200/70">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-3xl mx-auto mb-10">
-        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-dawn-900 mt-1">Focus Tracks & Domains</h2>
-        <div class="mt-3 inline-block bg-amber-50 border border-amber-200 text-amber-900 text-xs px-4 py-2 rounded-full font-medium">
-          <i class="fa-solid fa-circle-info mr-1"></i>
-          <strong>Note:</strong> Participants are welcome to make submissions in any relevant public health & AI domains other than those listed below.
-        </div>
-      </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="p-5 bg-cyber-card rounded-xl border border-slate-800 hover:border-gold-500/50 transition">
-        <h4 class="font-bold text-black mb-1"><i class="fa-solid fa-laptop-medical text-cyan-400 mr-2"></i>Diagnostics & Digital Health</h4>
-        <p class="text-xs text-slate-800">Applied epidemiology, point-of-care tools, and AI-driven diagnostics in Public Health.</p>
+      <div class="p-5 bg-cyber-card rounded-xl border border-slate-800 hover:border-cyan-500/50 transition">
+        <h4 class="font-bold text-white mb-1"><i class="fa-solid fa-laptop-medical text-cyan-400 mr-2"></i>Diagnostics & Digital Health</h4>
+        <p class="text-xs text-slate-400">Applied epidemiology, point-of-care tools, and AI-driven diagnostics in Public Health.</p>
       </div>
-      <div class="p-5 bg-cyber-card rounded-xl border border-slate-800 hover:border-gold-500/50 transition">
-        <h4 class="font-bold text-black mb-1"><i class="fa-solid fa-earth-americas text-cyan-400 mr-2"></i>Climate Change & Human Health</h4>
-        <p class="text-xs text-slate-800">Environmental health, Predictive modeling, Climate adaptation strategies.</p>
+      <div class="p-5 bg-cyber-card rounded-xl border border-slate-800 hover:border-cyan-500/50 transition">
+        <h4 class="font-bold text-white mb-1"><i class="fa-solid fa-earth-americas text-cyan-400 mr-2"></i>Climate Change & Human Health</h4>
+        <p class="text-xs text-slate-400">Environmental health, Predictive modeling, Climate adaptation strategies.</p>
       </div>
-      <div class="p-5 bg-cyber-card rounded-xl border border-slate-800 hover:border-gold-500/50 transition">
-        <h4 class="font-bold text-black mb-1"><i class="fa-solid fa-shield-virus text-cyan-400 mr-2"></i>Outbreaks & Disaster Risk Reduction</h4>
-        <p class="text-xs text-slate-800">Epidemiological surveillance, emergency response systems, and community resilience.</p>
+      <div class="p-5 bg-cyber-card rounded-xl border border-slate-800 hover:border-cyan-500/50 transition">
+        <h4 class="font-bold text-white mb-1"><i class="fa-solid fa-shield-virus text-cyan-400 mr-2"></i>Outbreaks & Disaster Risk Reduction</h4>
+        <p class="text-xs text-slate-400">Epidemiological surveillance, emergency response systems, and community resilience.</p>
       </div>
-      <div class="p-5 bg-cyber-card rounded-xl border border-slate-800 hover:border-gold-500/50 transition">
-        <h4 class="font-bold text-black mb-1"><i class="fa-solid fa-chart-line text-cyan-400 mr-2"></i>One Health and Antimicrobial Resistance</h4>
-        <p class="text-xs text-slate-800">AI-model based interventions for addressing antimicrobial resistance through One Health approaches.</p>
+      <div class="p-5 bg-cyber-card rounded-xl border border-slate-800 hover:border-cyan-500/50 transition">
+        <h4 class="font-bold text-white mb-1"><i class="fa-solid fa-chart-line text-cyan-400 mr-2"></i>One Health and Antimicrobial Resistance</h4>
+        <p class="text-xs text-slate-400">AI-model based interventions for addressing antimicrobial resistance through One Health approaches.</p>
       </div>
-      <div class="p-5 bg-cyber-card rounded-xl border border-slate-800 hover:border-gold-500/50 transition">
-        <h4 class="font-bold text-black mb-1"><i class="fa-solid fa-graduation-cap text-cyan-400 mr-2"></i>Medical and Public Health Education</h4>
-        <p class="text-xs text-slate-800">Transforming public health education and training workflows in the AI-era.</p>
+      <div class="p-5 bg-cyber-card rounded-xl border border-slate-800 hover:border-cyan-500/50 transition">
+        <h4 class="font-bold text-white mb-1"><i class="fa-solid fa-graduation-cap text-cyan-400 mr-2"></i>Medical and Public Health Education</h4>
+        <p class="text-xs text-slate-400">Transforming public health education and training workflows in the AI-era.</p>
       </div>
-      <div class="p-5 bg-cyber-card rounded-xl border border-slate-800 hover:border-gold-500/50 transition">
-        <h4 class="font-bold text-black mb-1"><i class="fa-solid fa-rocket text-cyan-400 mr-2"></i>Health Promotion and Communication</h4>
-        <p class="text-xs text-slate-800">Effective communication using AI models, enhancing workplace and industrial safety.</p>
+      <div class="p-5 bg-cyber-card rounded-xl border border-slate-800 hover:border-cyan-500/50 transition">
+        <h4 class="font-bold text-white mb-1"><i class="fa-solid fa-rocket text-cyan-400 mr-2"></i>Health Promotion and Communication</h4>
+        <p class="text-xs text-slate-400">Effective communication using AI models, enhancing workplace and industrial safety.</p>
+      </div>
+    </div>
+
+    <div id="academic-guidelines" class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+      <div class="bg-cyber-card p-6 rounded-xl glow-border">
+        <h3 class="text-xl font-bold text-cyan-300 mb-4 flex items-center">
+          <i class="fa-solid fa-bullhorn text-cyan-400 mr-3"></i>Idea Pitching Contest Instructions
+        </h3>
+        <ul class="space-y-3 text-sm text-slate-300">
+          <li class="flex items-start"><i class="fa-solid fa-chevron-right text-cyan-400 mt-1 mr-2 text-xs"></i><span><strong>Team Size:</strong> Teams of 3 members (interdisciplinary teams preferred).</span></li>
+          <li class="flex items-start"><i class="fa-solid fa-chevron-right text-cyan-400 mt-1 mr-2 text-xs"></i><span><strong>Abstract Submission:</strong> Submit a 300-word layout of your idea (Problem expected to be addressed, brief description of AI model, pilot results (if applicable)).</span></li>
+          <li class="flex items-start"><i class="fa-solid fa-chevron-right text-cyan-400 mt-1 mr-2 text-xs"></i><span><strong>Preliminary Round:</strong> Initial presentation/pitch evaluation by expert jury.</span></li>
+          <li class="flex items-start"><i class="fa-solid fa-chevron-right text-cyan-400 mt-1 mr-2 text-xs"></i><span><strong>Final Round:</strong> Working prototype/model demonstration.</span></li>
+          <li class="flex items-start"><i class="fa-solid fa-trophy text-amber-400 mt-1 mr-2 text-xs"></i><span>Exciting awards and prizes for winners in each category.</span></li>
+        </ul>
+      </div>
+
+      <div class="bg-cyber-card p-6 rounded-xl glow-border">
+        <h3 class="text-xl font-bold text-cyan-300 mb-4 flex items-center">
+          <i class="fa-solid fa-file-code text-cyan-400 mr-3"></i>Paper Presentation Instructions
+        </h3>
+        <ul class="space-y-3 text-sm text-slate-300">
+          <li class="flex items-start"><i class="fa-solid fa-chevron-right text-cyan-400 mt-1 mr-2 text-xs"></i><span><strong>Categories:</strong> Oral Research Presentations and Scientific Poster Showcases.</span></li>
+          <li class="flex items-start"><i class="fa-solid fa-chevron-right text-cyan-400 mt-1 mr-2 text-xs"></i><span><strong>Abstract Format:</strong> Structured abstract (Background, Methods, Results, Conclusion) up to 250 words.</span></li>
+          <li class="flex items-start"><i class="fa-solid fa-chevron-right text-cyan-400 mt-1 mr-2 text-xs"></i><span><strong>Review Process:</strong> Peer-reviewed selection by the Scientific Committee.</span></li>
+          <li class="flex items-start"><i class="fa-solid fa-chevron-right text-cyan-400 mt-1 mr-2 text-xs"></i><span><strong>Publication:</strong> Accepted abstracts will be published in the conclave souvenir proceedings.</span></li>
+          <li class="flex items-start"><i class="fa-solid fa-award text-amber-400 mt-1 mr-2 text-xs"></i><span>Best Paper and Best Poster awards presented during valedictory session.</span></li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- SCIENTIFIC SESSIONS-->
-<section id="sessions" class="py-16 bg-white border-b border-dawn-200/70">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    
-    <!-- Section Header -->
-    <div class="text-center max-w-3xl mx-auto mb-10">
-      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-dawn-900 mt-1">Scientific Sessions</h2>
-      <p class="text-slate-700 text-sm sm:text-base mt-2">
-        Engage with leading minds to explore the multidimensional landscape of artificial intelligence in public health.
-      </p>
+  <section id="workshop" class="py-16 bg-cyber-dark/60 border-y border-cyan-500/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-cyber-card rounded-2xl p-8 sm:p-10 glow-border w-full">
+        
+        <div class="mb-8 border-b border-cyan-500/20 pb-4">
+          <span class="bg-cyan-950 text-cyan-400 border border-cyan-500/50 text-xs font-bold px-3 py-1 rounded uppercase tracking-wider">
+            Hands-on Workshop
+          </span>
+          <h2 class="text-3xl font-extrabold text-white mt-3 glow-text">Navigating AI for Medical Research</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-slate-300">
+          <ul class="space-y-4 text-sm">
+            <li class="flex items-start">
+              <i class="fa-solid fa-microchip text-cyan-400 mt-1 mr-3"></i>
+              <span><strong>Prompt Engineering:</strong> Best practices for precise query design in research.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-scale-balanced text-cyan-400 mt-1 mr-3"></i>
+              <span><strong>Fair Use of AI:</strong> Declarations, bias mitigation, and ethical considerations.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-brain text-cyan-400 mt-1 mr-3"></i>
+              <span><strong>Brainstorming & Literature:</strong> Conceptualizing research ideas and summarizing evidence.</span>
+            </li>
+          </ul>
+
+          <ul class="space-y-4 text-sm">
+            <li class="flex items-start">
+              <i class="fa-solid fa-chart-pie text-cyan-400 mt-1 mr-3"></i>
+              <span><strong>Statistical Analysis:</strong> Leveraging AI tools for data interpretation and models.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-pen-nib text-cyan-400 mt-1 mr-3"></i>
+              <span><strong>Editing & Proofreading:</strong> AI-assisted manuscript formatting and refinement.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa-solid fa-certificate text-cyan-400 mt-1 mr-3"></i>
+              <span><strong>Hands-on Practice:</strong> Live dataset analysis and practical exercises.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="panels" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-extrabold text-white uppercase tracking-wider glow-text">Keynotes & Panel Discussions</h2>
+      <p class="text-cyan-400 text-xs mt-2 uppercase tracking-widest">Multi-sectoral discussions led by experts across the country</p>
+      <div class="w-16 h-1 bg-cyan-400 mx-auto mt-3"></div>
     </div>
 
-    <!-- Three-Column Layout -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.5fr_2fr_1.5fr] gap-6 mb-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       
-      <!-- Card 1: Technical Dialogues -->
-      <div class="bg-mist/50 border border-dawn-200 rounded-2xl p-6 sm:p-8 space-y-4">
-        <h3 class="font-serif text-2xl font-bold text-dawn-900 flex items-center gap-2">
-          <i class="text-dawn-800"></i> Technical Dialogues
-        </h3>
-        <ul class="space-y-3 text-sm text-slate-700">
-          <li class="flex items-start gap-2.5">
-            <i class="fa-regular fa-circle-check text-emerald-600 mt-1"></i>
-            <span><strong>Reaching the last mile</strong></span>
-          </li>
-          <li class="flex items-start gap-2.5">
-            <i class="fa-regular fa-circle-check text-emerald-600 mt-1"></i>
-            <span><strong>Privacy of patients in AI-models</strong></span>
-          </li>
-          <li class="flex items-start gap-2.5">
-            <i class="fa-regular fa-circle-check text-emerald-600 mt-1"></i>
-            <span><strong>Future of National Health Programs</strong></span>
-          </li>
-          <li class="flex items-start gap-2.5">
-            <i class="fa-regular fa-circle-check text-emerald-600 mt-1"></i>
-            <span><strong>Climate Change and Human Health</strong></span>
-          </li>
-          <li class="flex items-start gap-2.5">
-            <i class="fa-regular fa-circle-check text-emerald-600 mt-1"></i>
-            <span><strong>Beyond video calls - AI in Telemedicine</strong></span>
-          </li>
+      <div class="bg-cyber-card p-8 rounded-xl glow-border">
+        <div class="flex items-center space-x-3 mb-4">
+          <div class="w-10 h-10 bg-cyan-950 border border-cyan-500/50 rounded-lg flex items-center justify-center text-cyan-400 text-xl font-bold">
+            <i class="fa-solid fa-microphone"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white uppercase tracking-wider">Keynote Addresses</h3>
+        </div>
+        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+          Eminent keynote speakers from leading national institutions will deliver lectures exploring:
+        </p>
+        <ul class="space-y-2.5 text-xs text-slate-400">
+          <li class="flex items-start"><i class="fa-solid fa-atom text-cyan-400 mt-0.5 mr-2"></i><span>Public Health Entrepreneurship and Innovation</span></li>
+          <li class="flex items-start"><i class="fa-solid fa-atom text-cyan-400 mt-0.5 mr-2"></i><span>Future of National Health Programs in an AI-Driven World</span></li>
+          <li class="flex items-start"><i class="fa-solid fa-atom text-cyan-400 mt-0.5 mr-2"></i><span>Global Health Governance and Digital Divide</span></li>
+          <li class="flex items-start"><i class="fa-solid fa-atom text-cyan-400 mt-0.5 mr-2"></i><span>Big Data Analytics and Precision Public Health</span></li>
         </ul>
       </div>
 
-      <!-- Card 2: Panel Discussions -->
-      <div class="bg-mist/50 border border-dawn-200 rounded-2xl p-6 sm:p-8 space-y-4">
-        <h3 class="font-serif text-2xl font-bold text-dawn-900 flex items-center gap-2">
-          <i class="text-dawn-600"></i> Panel Discussions
-        </h3>
-        <ul class="space-y-3 text-sm text-slate-700">
-          <li class="flex items-start gap-2.5">
-            <i class="fa-regular fa-circle-check text-emerald-600 mt-1"></i>
-            <span><strong>Applied Epidemiology - Evolution</strong></span>
-          </li>
-          <li class="flex items-start gap-2.5">
-            <i class="fa-regular fa-circle-check text-emerald-600 mt-1"></i>
-            <span><strong>Medical and Public Health Education in the AI-Era</strong></span>
-          </li>
-          <li class="flex items-start gap-2.5">
-            <i class="fa-regular fa-circle-check text-emerald-600 mt-1"></i>
-            <span><strong>Deploying AI-models in field: Systems & Implementation</strong></span>
-          </li>
-          <li class="flex items-start gap-2.5">
-            <i class="fa-regular fa-circle-check text-emerald-600 mt-1"></i>
-            <span><strong>Public Health Entrepreneurship & Start-ups</strong></span>
-          </li>
-          <li class="flex items-start gap-2.5">
-            <i class="fa-regular fa-circle-check text-emerald-600 mt-1"></i>
-            <span><strong>Equitable Algorithms, Gender-Responsive AI</strong></span>
-          </li>
+      <div class="bg-cyber-card p-8 rounded-xl glow-border">
+        <div class="flex items-center space-x-3 mb-4">
+          <div class="w-10 h-10 bg-cyan-950 border border-cyan-500/50 rounded-lg flex items-center justify-center text-cyan-400 text-xl font-bold">
+            <i class="fa-solid fa-comments"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white uppercase tracking-wider">Panel Discussions</h3>
+        </div>
+        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+          Interactive panel forums bringing together medical researchers, scientists, policymakers, and entrepeneurs on:
+        </p>
+        <ul class="space-y-2.5 text-xs text-slate-400">
+          <li class="flex items-start"><i class="fa-solid fa-network-wired text-cyan-400 mt-0.5 mr-2"></i><span>AI solutions for Climate Change and Human Health</span></li>
+          <li class="flex items-start"><i class="fa-solid fa-network-wired text-cyan-400 mt-0.5 mr-2"></i><span>Industrial Safety & Disaster Risk Reduction</span></li>
+          <li class="flex items-start"><i class="fa-solid fa-network-wired text-cyan-400 mt-0.5 mr-2"></i><span>Health Systems & Implementation Research for deployment of AI-models</span></li>
+          <li class="flex items-start"><i class="fa-solid fa-network-wired text-cyan-400 mt-0.5 mr-2"></i><span>Applied Epidemiology & Digital Health Diagnostics</span></li>
+          <li class="flex items-start"><i class="fa-solid fa-network-wired text-cyan-400 mt-0.5 mr-2"></i><span>Medical and Public Health Education in AI-era</span></li>
         </ul>
       </div>
-
-      <!-- Card 3: Showcases -->
-      <div class="bg-mist/50 border border-dawn-200 rounded-2xl p-6 sm:p-8 space-y-4">
-        <h3 class="font-serif text-2xl font-bold text-dawn-900 flex items-center gap-2">
-          <i class="text-dawn-600"></i> Showcases
-        </h3>
-        <ul class="space-y-3 text-sm text-slate-700">
-          <li class="flex items-start gap-2.5">
-            <i class="fa-regular fa-circle-check text-emerald-600 mt-1"></i>
-            <span><strong>Big Data Analytics</strong></span>
-          </li>
-          <li class="flex items-start gap-2.5">
-            <i class="fa-regular fa-circle-check text-emerald-600 mt-1"></i>
-            <span><strong>Decision Support Systems in Healthcare</strong></span>
-          </li>
-          <li class="flex items-start gap-2.5">
-            <i class="fa-regular fa-circle-check text-emerald-600 mt-1"></i>
-            <span><strong>Establishing an AI Centre</strong></span>
-          </li>
-          <li class="flex items-start gap-2.5">
-            <i class="fa-regular fa-circle-check text-emerald-600 mt-1"></i>
-            <span><strong>Precision Public Health</strong></span>
-          </li>
-          <li class="flex items-start gap-2.5">
-            <i class="fa-regular fa-circle-check text-emerald-600 mt-1"></i>
-            <span><strong>AI for Eye</strong></span>
-          </li>
-        </ul>
       </div>
-
-    </div>
-
-    <!-- Centered Cursive Text -->
-    <div class="text-center mt-6">
-      <p class="text-slate-500 text-xl sm:text-5xl tracking-wide" style="font-family: 'Brush Script MT', 'Dancing Script', cursive;">
-        ... and many more
-      </p>
-    </div>
-
-  </div>
-</section>
-  
-
-
-<section id="speakers" class="py-16 bg-white border-b border-dawn-200/70 relative">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    
-    <!-- Section Title -->
-    <div class="text-center max-w-3xl mx-auto mb-16">
-      <span class="text-xs sm:text-sm font-bold tracking-widest text-dawn-600 uppercase">Distinguished Faculty & Experts</span>
-      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-dawn-900 mt-1">Our Eminent Speakers</h2>
-      <div class="h-0.5 w-24 mx-auto bg-gradient-to-r from-transparent via-gold-500 to-transparent mt-3"></div>
-    </div>
-
-    <!-- 4-Column Responsive Grid (5 Rows x 4 Columns = 20 Speakers) -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 items-start">
-
-      <!-- 1. Prof. Abhay Nirgude -->
-      <div class="flex flex-col items-center text-center group">
-        <div class="relative w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-md overflow-hidden mb-4 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-          <svg class="w-16 h-16 sm:w-20 sm:h-20 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-          </svg>
-          <img src="speakers/abhay.jpg" alt="Prof. Abhay Nirgude" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-        </div>
-        <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-2xl px-4 py-3.5 shadow-sm min-h-[6.25rem] flex flex-col justify-center">
-          <h3 class="font-bold text-dawn-900 text-sm sm:text-base tracking-tight leading-snug">Prof. Abhay Nirgude</h3>
-          <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed mt-1">Prof., CM, Vice-Principal,<br/>Yenepoya Medical College</p>
-        </div>
-      </div>
-
-      <!-- 2. Dr. Anjali Modi -->
-      <div class="flex flex-col items-center text-center group">
-        <div class="relative w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-md overflow-hidden mb-4 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-          <svg class="w-16 h-16 sm:w-20 sm:h-20 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-          </svg>
-          <img src="speakers/anjali.jpg" alt="Dr. Anjali Modi" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-        </div>
-        <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-2xl px-4 py-3.5 shadow-sm min-h-[6.25rem] flex flex-col justify-center">
-          <h3 class="font-bold text-dawn-900 text-sm sm:text-base tracking-tight leading-snug">Dr. Anjali Modi</h3>
-          <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed mt-1">Associate Prof., CFM,<br/>AIIMS Rajkot</p>
-        </div>
-      </div>
-
-      <!-- 3. Dr. Anu Mohandas -->
-<div class="flex flex-col items-center text-center group">
-  <div class="relative w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-md overflow-hidden mb-4 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-    <svg class="w-16 h-16 sm:w-20 sm:h-20 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-    </svg>
-    <img src="speakers/anu.jpg" alt="Dr. Anu Mohandas" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-  </div>
-  <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-2xl px-4 py-3.5 shadow-sm min-h-[6.25rem] flex flex-col justify-center">
-    <h3 class="font-bold text-dawn-900 text-sm sm:text-base tracking-tight leading-snug">Dr. Anu Mohandas</h3>
-    <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed mt-1">Associate Prof., CM,<br/>Head, Digital Health & AI Centre<br/>BGS Med. College & Hospital</p>
-  </div>
-</div>
-
-      <!-- 4. Dr. Aravinda C -->
-      <div class="flex flex-col items-center text-center group">
-        <div class="relative w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-md overflow-hidden mb-4 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-          <svg class="w-16 h-16 sm:w-20 sm:h-20 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-          </svg>
-          <img src="speakers/aravinda.jpg" alt="Dr. Aravinda C" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-        </div>
-        <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-2xl px-4 py-3.5 shadow-sm min-h-[6.25rem] flex flex-col justify-center">
-          <h3 class="font-bold text-dawn-900 text-sm sm:text-base tracking-tight leading-snug">Dr. Aravinda C</h3>
-          <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed mt-1">Senior Asst. Prof., CM,<br/>Thanjavur Medical College</p>
-        </div>
-      </div>
-
-      <!-- 5. Prof. Balu P S -->
-      <div class="flex flex-col items-center text-center group">
-        <div class="relative w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-md overflow-hidden mb-4 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-          <svg class="w-16 h-16 sm:w-20 sm:h-20 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-          </svg>
-          <img src="speakers/balu.jpg" alt="Prof. Balu P S" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-        </div>
-        <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-2xl px-4 py-3.5 shadow-sm min-h-[6.25rem] flex flex-col justify-center">
-          <h3 class="font-bold text-dawn-900 text-sm sm:text-base tracking-tight leading-snug">Prof. Balu P S</h3>
-          <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed mt-1">Prof., CM, Director, CARE,<br/>SUIMS, Shivamogga</p>
-        </div>
-      </div>
-
-      <!-- 6. Dr. Chitralekha Bhat -->
-      <div class="flex flex-col items-center text-center group">
-        <div class="relative w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-md overflow-hidden mb-4 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-          <svg class="w-16 h-16 sm:w-20 sm:h-20 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-          </svg>
-          <img src="speakers/chitra.jpg" alt="Dr. Chitralekha Bhat" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-        </div>
-        <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-2xl px-4 py-3.5 shadow-sm min-h-[6.25rem] flex flex-col justify-center">
-          <h3 class="font-bold text-dawn-900 text-sm sm:text-base tracking-tight leading-snug">Dr. Chitralekha Bhat</h3>
-          <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed mt-1">Chief Engineering Manager,<br/>TANUH AI, IISc</p>
-        </div>
-      </div>
-
-      <!-- 7. Dr. Jayaraj P B -->
-      <div class="flex flex-col items-center text-center group">
-        <div class="relative w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-md overflow-hidden mb-4 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-          <svg class="w-16 h-16 sm:w-20 sm:h-20 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-          </svg>
-          <img src="speakers/jayaraj.jpg" alt="Dr. Jayaraj P B" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-        </div>
-        <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-2xl px-4 py-3.5 shadow-sm min-h-[6.25rem] flex flex-col justify-center">
-          <h3 class="font-bold text-dawn-900 text-sm sm:text-base tracking-tight leading-snug">Dr. Jayaraj P B</h3>
-          <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed mt-1">Associate Prof., CS & Engg.,<br/>NIT Calicut</p>
-        </div>
-      </div>
-
-      <!-- 8. Dr. Karthika Kumar -->
-      <div class="flex flex-col items-center text-center group">
-        <div class="relative w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-md overflow-hidden mb-4 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-          <svg class="w-16 h-16 sm:w-20 sm:h-20 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-          </svg>
-          <img src="speakers/karthika.jpg" alt="Dr. Karthika Kumar" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-        </div>
-        <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-2xl px-4 py-3.5 shadow-sm min-h-[6.25rem] flex flex-col justify-center">
-          <h3 class="font-bold text-dawn-900 text-sm sm:text-base tracking-tight leading-snug">Dr. Karthika Kumar</h3>
-          <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed mt-1">Public Health Consultant,<br/>Remidio Innovative Solutions</p>
-        </div>
-      </div>
-
-      <!-- 9. Dr. Koustav Chaterjee -->
-      <div class="flex flex-col items-center text-center group">
-        <div class="relative w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-md overflow-hidden mb-4 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-          <svg class="w-16 h-16 sm:w-20 sm:h-20 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-          </svg>
-          <img src="speakers/koustav.jpg" alt="Dr. Koustav Chaterjee" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-        </div>
-        <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-2xl px-4 py-3.5 shadow-sm min-h-[6.25rem] flex flex-col justify-center">
-          <h3 class="font-bold text-dawn-900 text-sm sm:text-base tracking-tight leading-snug">Dr. Koustav Chaterjee</h3>
-          <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed mt-1">Clinical Operations & Quality Manager,<br/>Remidio Innovative Solutions</p>
-        </div>
-      </div>
-
-      <!-- 10. Dr. Mandula Phani Priya -->
-      <div class="flex flex-col items-center text-center group">
-        <div class="relative w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-md overflow-hidden mb-4 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-          <svg class="w-16 h-16 sm:w-20 sm:h-20 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-          </svg>
-          <img src="speakers/priya.jpg" alt="Dr. Mandula Phani Priya" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-        </div>
-        <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-2xl px-4 py-3.5 shadow-sm min-h-[6.25rem] flex flex-col justify-center">
-          <h3 class="font-bold text-dawn-900 text-sm sm:text-base tracking-tight leading-snug">Dr. Mandula Phani Priya</h3>
-          <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed mt-1">Asst. Prof., Neonatology,<br/>AIIMS Mangalagiri</p>
-        </div>
-      </div>
-
-      <!-- 11. Dr. Manickam Ponnaiah -->
-      <div class="flex flex-col items-center text-center group">
-        <div class="relative w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-md overflow-hidden mb-4 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-          <svg class="w-16 h-16 sm:w-20 sm:h-20 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-          </svg>
-          <img src="speakers/manickam.jpg" alt="Dr. Manickam P" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-        </div>
-        <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-2xl px-4 py-3.5 shadow-sm min-h-[6.25rem] flex flex-col justify-center">
-          <h3 class="font-bold text-dawn-900 text-sm sm:text-base tracking-tight leading-snug">Dr. Manickam Ponnaiah</h3>
-          <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed mt-1">Scientist-F,<br/>ICMR - NIE, Chennai</p>
-        </div>
-      </div>
-
-      <!-- 12. Dr. Nikhilesh Ladha -->
-      <div class="flex flex-col items-center text-center group">
-        <div class="relative w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-md overflow-hidden mb-4 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-          <svg class="w-16 h-16 sm:w-20 sm:h-20 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-          </svg>
-          <img src="speakers/nikhilesh.jpg" alt="Dr. Nikhilesh Ladha" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-        </div>
-        <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-2xl px-4 py-3.5 shadow-sm min-h-[6.25rem] flex flex-col justify-center">
-          <h3 class="font-bold text-dawn-900 text-sm sm:text-base tracking-tight leading-snug">Dr. Nikhilesh Ladha</h3>
-          <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed mt-1">Asst. Prof., CFM,<br/>AIIMS Rajkot</p>
-        </div>
-      </div>
-
-      <!-- 13. Prof. Pankaj Bhardwaj -->
-      <div class="flex flex-col items-center text-center group">
-        <div class="relative w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-md overflow-hidden mb-4 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-          <svg class="w-16 h-16 sm:w-20 sm:h-20 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-          </svg>
-          <img src="speakers/PB.jpg" alt="Prof. Pankaj Bhardwaj" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-        </div>
-        <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-2xl px-4 py-3.5 shadow-sm min-h-[6.25rem] flex flex-col justify-center">
-          <h3 class="font-bold text-dawn-900 text-sm sm:text-base tracking-tight leading-snug">Prof. Pankaj Bhardwaj</h3>
-          <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed mt-1">Director,<br/>ICMR - NIHR, Jodhpur</p>
-        </div>
-      </div>
-
-      <!-- 14. Ms. Pavithra G -->
-      <div class="flex flex-col items-center text-center group">
-        <div class="relative w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-md overflow-hidden mb-4 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-          <svg class="w-16 h-16 sm:w-20 sm:h-20 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-          </svg>
-          <img src="speakers/pavithra.jpg" alt="Ms. Pavithra G" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-        </div>
-        <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-2xl px-4 py-3.5 shadow-sm min-h-[6.25rem] flex flex-col justify-center">
-          <h3 class="font-bold text-dawn-900 text-sm sm:text-base tracking-tight leading-snug">Ms. Pavithra G</h3>
-          <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed mt-1">Senior Technical Member,<br/>Tanuh AI, IISc</p>
-        </div>
-      </div>
-
-      <!-- 15. Dr. Prasanna Thirunavukkarasu -->
-      <div class="flex flex-col items-center text-center group">
-        <div class="relative w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-md overflow-hidden mb-4 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-          <svg class="w-16 h-16 sm:w-20 sm:h-20 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-          </svg>
-          <img src="speakers/prasanna.jpg" alt="Dr. Prasanna T" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-        </div>
-        <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-2xl px-4 py-3.5 shadow-sm min-h-[6.25rem] flex flex-col justify-center">
-          <h3 class="font-bold text-dawn-900 text-sm sm:text-base tracking-tight leading-snug">Dr. Prasanna Thirunavukkarasu</h3>
-          <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed mt-1">Additional Prof., CMFM,<br/>AIIMS Jodhpur</p>
-        </div>
-      </div>
-
-      <!-- 16. Dr. Revadi G -->
-      <div class="flex flex-col items-center text-center group">
-        <div class="relative w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-md overflow-hidden mb-4 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-          <svg class="w-16 h-16 sm:w-20 sm:h-20 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-          </svg>
-          <img src="speakers/revadi.jpg" alt="Dr. Revadi G" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-        </div>
-        <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-2xl px-4 py-3.5 shadow-sm min-h-[6.25rem] flex flex-col justify-center">
-          <h3 class="font-bold text-dawn-900 text-sm sm:text-base tracking-tight leading-snug">Dr. Revadi G</h3>
-          <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed mt-1">Asst. Prof. (Epidemiology),<br/>JIPMER International School of Public Health</p>
-        </div>
-      </div>
-
-      <!-- 17. Dr. Sajjan Madappady -->
-      <div class="flex flex-col items-center text-center group">
-        <div class="relative w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-md overflow-hidden mb-4 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-          <svg class="w-16 h-16 sm:w-20 sm:h-20 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-          </svg>
-          <img src="speakers/sajjan.jpg" alt="Dr. Sajjan Madappady" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-        </div>
-        <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-2xl px-4 py-3.5 shadow-sm min-h-[6.25rem] flex flex-col justify-center">
-          <h3 class="font-bold text-dawn-900 text-sm sm:text-base tracking-tight leading-snug">Dr. Sajjan Madappady</h3>
-          <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed mt-1">Digital Health & AI Consultant,<br/>Adichunchanagiri University</p>
-        </div>
-      </div>
-
-      <!-- 18. Dr. Saurav Basu -->
-      <div class="flex flex-col items-center text-center group">
-        <div class="relative w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-md overflow-hidden mb-4 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-          <svg class="w-16 h-16 sm:w-20 sm:h-20 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-          </svg>
-          <img src="speakers/saurav.jpg" alt="Dr. Saurav Basu" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-        </div>
-        <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-2xl px-4 py-3.5 shadow-sm min-h-[6.25rem] flex flex-col justify-center">
-          <h3 class="font-bold text-dawn-900 text-sm sm:text-base tracking-tight leading-snug">Dr. Saurav Basu</h3>
-          <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed mt-1">Scientist-E,<br/>ICMR - NIRDH, New Delhi</p>
-        </div>
-      </div>
-
-      <!-- 19. Dr. Sharan Murali -->
-      <div class="flex flex-col items-center text-center group">
-        <div class="relative w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-md overflow-hidden mb-4 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-          <svg class="w-16 h-16 sm:w-20 sm:h-20 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-          </svg>
-          <img src="speakers/sharan.jpg" alt="Dr. Sharan Murali" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-        </div>
-        <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-2xl px-4 py-3.5 shadow-sm min-h-[6.25rem] flex flex-col justify-center">
-          <h3 class="font-bold text-dawn-900 text-sm sm:text-base tracking-tight leading-snug">Dr. Sharan Murali</h3>
-          <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed mt-1">Scientist-C,<br/>ICMR - NIE, Chennai</p>
-        </div>
-      </div>
-
-      <!-- 20. Dr. Shilpa Desai -->
-      <div class="flex flex-col items-center text-center group">
-        <div class="relative w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-md overflow-hidden mb-4 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-          <svg class="w-16 h-16 sm:w-20 sm:h-20 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-          </svg>
-          <img src="speakers/shilpa.jpg" alt="Dr. Shilpa Desai" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-        </div>
-        <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-2xl px-4 py-3.5 shadow-sm min-h-[6.25rem] flex flex-col justify-center">
-          <h3 class="font-bold text-dawn-900 text-sm sm:text-base tracking-tight leading-snug">Dr. Shilpa Desai</h3>
-          <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed mt-1">CEO-Health Sciences,<br/>EROS Innovations</p>
-        </div>
-      </div>
-
-      <!-- 21. Dr. Sreya Chattopadhyay -->
-      <div class="flex flex-col items-center text-center group">
-        <div class="relative w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-md overflow-hidden mb-4 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-          <svg class="w-16 h-16 sm:w-20 sm:h-20 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-          </svg>
-          <img src="speakers/sreya.jpg" alt="Dr. Sreya Chattopadhyay" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-        </div>
-        <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-2xl px-4 py-3.5 shadow-sm min-h-[6.25rem] flex flex-col justify-center">
-          <h3 class="font-bold text-dawn-900 text-sm sm:text-base tracking-tight leading-snug">Dr. Sreya Chattopadhyay</h3>
-          <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed mt-1">Director, Bizinnovision Pvt. Ltd.</p>
-        </div>
-      </div>
-
-      <!-- 22. Dr. Sridhar Ryavanki -->
-      <div class="flex flex-col items-center text-center group">
-        <div class="relative w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-md overflow-hidden mb-4 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-          <svg class="w-16 h-16 sm:w-20 sm:h-20 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-          </svg>
-          <img src="speakers/sridhar.jpg" alt="Dr. Sridhar Ryavanki" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-        </div>
-        <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-2xl px-4 py-3.5 shadow-sm min-h-[6.25rem] flex flex-col justify-center">
-          <h3 class="font-bold text-dawn-900 text-sm sm:text-base tracking-tight leading-snug">Dr. Sridhar Ryavanki</h3>
-          <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed mt-1">Health Specialist, UNICEF</p>
-        </div>
+      <div class="text-xs text-slate-400">
+          Disclaimer: Please note that the titles and domains mentioned for the keynote addresses and panel discussions are tentative, and subject to change. The organising committee reserves the right to modify or adjust the program schedule and session themes based on emerging developments, recommendations from the expert steering panel, and administrative or logistical requirements.
       </div>
     </div>
 
-    <div class="text-center mt-6">
-      <p class="text-slate-500 text-xl sm:text-5xl tracking-wide" style="font-family: 'Brush Script MT', 'Dancing Script', cursive;">
-        ...more neural minds joining soon...
-      </p>
-    </div>
-  </div>
-</section>
-
-  <!-- REGISTRATION & FEES -->
-<section id="registration" class="py-16 bg-[#FAF8F5] border-b border-dawn-200/70">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-    
-    <div class="text-center mb-10">
-      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-dawn-900 mt-1">Registration Fees & Categories</h2>
     </div>
 
-    <!-- Pricing Table -->
-    <div class="bg-white border border-dawn-200 rounded-2xl shadow-sm overflow-hidden">
-      <div class="overflow-x-auto">
-        <table class="w-full text-sm">
-          <thead class="bg-dawn-50 border-b border-dawn-200 text-dawn-900 font-bold uppercase text-xs">
-            <tr>
-              <th class="p-4 sm:p-5 text-left w-2/5">Delegate Category</th>
-              <th class="p-4 sm:p-5 text-center w-1/5">Pre-conference Workshop</th>
-              <th class="p-4 sm:p-5 text-center w-1/5 bg-dawn-100/60 text-dawn-900">
-                <span>Early Bird</span>
-                <span class="block text-[11px] font-medium normal-case text-dawn-700 mt-0.5">Up to Oct 15, 2026</span>
+  <section id="registration" class="bg-cyber-dark py-16 border-t border-cyan-500/20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-extrabold text-white uppercase tracking-wider glow-text">Registration Categories</h2>
+        <p class="text-cyan-400 text-xs mt-1">Group registrations will be considered for a discount. Contact organising team for group registrations.</p>
+      </div>
+
+      <div class="overflow-x-auto rounded-xl border border-cyan-500/30">
+        <table class="w-full text-left border-collapse text-sm">
+          <thead>
+            <tr class="bg-cyber-card text-cyan-300 border-b border-cyan-500/30 uppercase text-xs">
+              <th rowspan="2" class="p-4 font-bold border-r border-cyan-500/20 align-middle">Category</th>
+              <th rowspan="2" class="p-4 font-bold text-center border-r border-cyan-500/20 align-middle">Workshop</th>
+              <th colspan="2" class="p-3 font-bold text-center border-b border-cyan-500/20">Conference</th>
+            </tr>
+            <tr class="bg-cyber-card/80 text-cyan-200 border-b border-cyan-500/30 text-[11px]">
+              <th class="p-2 text-center border-r border-cyan-500/20">
+                Early Bird<br/>
+                <span class="text-[10px] text-slate-400 font-normal lowercase">(up to October 15, 2026)</span>
               </th>
-              <th class="p-4 sm:p-5 text-center w-1/5">
-                <span>Late Bird</span>
-                <span class="block text-[11px] font-medium normal-case text-slate-500 mt-0.5">16 Oct, 2026 onwards</span>
+              <th class="p-2 text-center">
+                Late Bird<br/>
+                <span class="text-[10px] text-slate-400 font-normal lowercase">(October 16, 2026 onwards)</span>
               </th>
             </tr>
           </thead>
-          <tbody class="divide-y divide-dawn-100 text-slate-700">
-            <tr class="hover:bg-dawn-50/40 transition">
-              <td class="p-4 sm:p-5 font-medium align-middle">Undergraduate Students (Any Discipline)</td>
-              <td class="p-4 sm:p-5 text-center align-middle font-medium">₹1,500</td>
-              <td class="p-4 sm:p-5 text-center align-middle font-bold text-dawn-800 bg-dawn-50/50">₹2,000</td>
-              <td class="p-4 sm:p-5 text-center align-middle font-medium">₹3,000</td>
+          <tbody class="divide-y divide-slate-800 bg-cyber-black/80">
+            <tr class="hover:bg-cyan-950/30 transition">
+              <td class="p-4 font-medium text-white border-r border-slate-800">Undergraduate students from any discipline</td>
+              <td class="p-4 text-center text-cyan-200 font-semibold border-r border-slate-800">₹1500</td>
+              <td class="p-4 text-center text-cyan-300 font-semibold border-r border-slate-800">₹2000</td>
+              <td class="p-4 text-center text-cyan-400 font-bold">₹3000</td>
             </tr>
-            <tr class="hover:bg-dawn-50/40 transition">
-              <td class="p-4 sm:p-5 font-medium align-middle leading-snug">Medical Residents (JRs, SRs), PhD Scholars and PG students (other disciplines)</td>
-              <td class="p-4 sm:p-5 text-center align-middle font-medium">₹2,000</td>
-              <td class="p-4 sm:p-5 text-center align-middle font-bold text-dawn-800 bg-dawn-50/50">₹4,000</td>
-              <td class="p-4 sm:p-5 text-center align-middle font-medium">₹5,000</td>
+            <tr class="hover:bg-cyan-950/30 transition">
+              <td class="p-4 font-medium text-white border-r border-slate-800">Medical residents, PhD scholars, PG students (other disciplines)</td>
+              <td class="p-4 text-center text-cyan-200 font-semibold border-r border-slate-800">₹2000</td>
+              <td class="p-4 text-center text-cyan-300 font-semibold border-r border-slate-800">₹4000</td>
+              <td class="p-4 text-center text-cyan-400 font-bold">₹5000</td>
             </tr>
-            <tr class="hover:bg-dawn-50/40 transition">
-              <td class="p-4 sm:p-5 font-medium align-middle leading-snug">Faculty, Independent Researchers & Professionals from other disciplines</td>
-              <td class="p-4 sm:p-5 text-center align-middle font-medium">₹2,500</td>
-              <td class="p-4 sm:p-5 text-center align-middle font-bold text-dawn-800 bg-dawn-50/50">₹5,000</td>
-              <td class="p-4 sm:p-5 text-center align-middle font-medium">₹6,000</td>
+            <tr class="hover:bg-cyan-950/30 transition">
+              <td class="p-4 font-medium text-white border-r border-slate-800">Faculty/Professionals from other disciplines/Independent researchers</td>
+              <td class="p-4 text-center text-cyan-200 font-semibold border-r border-slate-800">₹2500</td>
+              <td class="p-4 text-center text-cyan-300 font-semibold border-r border-slate-800">₹5000</td>
+              <td class="p-4 text-center text-cyan-400 font-bold">₹6000</td>
             </tr>
           </tbody>
         </table>
       </div>
-    </div>
-        <div class="mt-3 inline-block bg-amber-50 border border-amber-200 text-amber-900 text-xs px-4 py-2 rounded-full font-medium">
-          <i class="fa-solid fa-circle-info mr-1"></i>
-          <strong>Note:</strong> Registration fee is non-refundable. Group registrations will be considered for a discount. Please contact the organising team for the same. 
-        </div>
-    <!-- Payment & Bank Details -->
-    <div class="mt-8 bg-white border border-dawn-200 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row justify-between items-center gap-6 shadow-sm">
-      <div class="space-y-1.5 text-center md:text-left">
-        <h4 class="font-serif font-bold text-dawn-900 text-lg">Bank Account Details for NEFT / RTGS / UPI</h4>
-        <div class="text-xs sm:text-sm text-slate-600 flex flex-wrap gap-x-4 gap-y-1 justify-center md:justify-start">
-          <span><strong>Account Name:</strong> AIIMS MG - CFM PROGRAMS</span>
-          <span><strong>A/C No:</strong> 43551252871</span>
-          <span><strong>Bank:</strong> State Bank of India, AIIMS Mangalagiri</span>
-          <span><strong>IFSC:</strong> SBIN0061485</span>
-        </div>
-      </div>
-      <a href="https://forms.gle/t6LttjHPHdzeosSs6" target="_blank" rel="noopener noreferrer"
-         class="bg-dawn-800 hover:bg-dawn-900 text-white font-bold px-8 py-3.5 rounded-lg shadow-sm hover:shadow transition whitespace-nowrap text-center">
-        Register Now &rarr;
-      </a>
-    </div>
-  </div>
-</section>
 
-<!-- CONTACT US SECTION (Editorial Ivory Theme) -->
-<section id="contact" class="py-16 bg-[#FAF8F5] border-b border-dawn-200/70 relative">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    
-    <!-- Section Heading -->
+      <div class="mt-8 bg-cyber-card border border-slate-800 p-6 rounded-xl flex flex-col md:flex-row justify-between items-center gap-6">
+        <div>
+          <h4 class="text-sm font-bold text-cyan-300 uppercase tracking-wider">Payment Details</h4>
+          <p class="text-xs text-slate-400 mt-1">Account Name: <strong class="text-white">AIIMS MG - CFM PROGRAMS</strong> | A/C No: <strong class="text-white">43551252871</strong></p>
+          <p class="text-xs text-slate-400">Bank: <strong class="text-white">State Bank of India, AIIMS Mangalagiri</strong> | IFSC: <strong class="text-white">SBIN0061485</strong></p>
+        </div>
+
+        <a href="https://forms.gle/t6LttjHPHdzeosSs6" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="whitespace-nowrap bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-black font-extrabold px-6 py-3.5 rounded-lg shadow-[0_0_20px_rgba(0,242,254,0.4)] transition uppercase text-xs tracking-wider flex items-center gap-2">
+          <span>Register Now</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+        </a>
+      </div>
+      <div class="text-xs text-slate-400">
+          * Fee covers course material, kit, lunch & refreshments for registered days. Participants are expected to arrange their travel and accommodation. Please contact organising team in need of assistance.
+      </div>
+    </div>
+  </section>
+
+
+  <section id="contact" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-cyan-500/20">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-extrabold text-white uppercase tracking-wider glow-text">Contact Us</h2>
+      <p class="text-cyan-400 text-xs mt-1 uppercase tracking-widest">For enquiries, registration & submission support</p>
+      <div class="w-16 h-1 bg-cyan-400 mx-auto mt-2"></div>
+    </div>
+
+    <div class="bg-cyber-card rounded-xl p-8 glow-border max-w-4xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
+        
+        <div class="p-4 bg-cyber-dark rounded-lg border border-slate-800">
+          <div class="text-cyan-400 text-xl mb-2"><i class="fa-solid fa-user-gear"></i></div>
+          <h4 class="text-sm font-bold text-white uppercase mb-1">Organising Secretary</h4>
+          <p class="text-xs text-cyan-300 font-semibold">Dr. Pritish Baskaran T B</p>
+          <p class="text-xs text-slate-400 mt-1">Assistant Professor, Dept. of CFM</p>
+          <p class="text-xs text-cyan-300 font-semibold">+91-8610361238</p>
+        </div>
+
+        <div class="p-4 bg-cyber-dark rounded-lg border border-slate-800">
+          <div class="text-cyan-400 text-xl mb-2"><i class="fa-solid fa-user-gear"></i></div>
+          <h4 class="text-sm font-bold text-white uppercase mb-1">Nodal Persons</h4>
+          <p class="text-xs text-cyan-300 font-semibold">Dr. Joe Amalan & Dr. Sivanthiga G</p>
+          <p class="text-xs text-slate-400 mt-1">Senior Residents, Dept. of CFM</p>
+          <p class="text-xs text-cyan-300 font-semibold">+91-9500874376 & +91-7373057587</p>
+          
+        </div>
+
+        <div class="p-4 bg-cyber-dark rounded-lg border border-slate-800">
+          <div class="text-cyan-400 text-xl mb-2"><i class="fa-solid fa-envelope"></i></div>
+          <h4 class="text-sm font-bold text-white uppercase mb-1">Email Enquiry</h4>
+          <p class="text-xs text-cyan-300 font-semibold">aipublichealthaiimsmg@gmail.com</p>
+          <p class="text-xs text-slate-400 mt-1">Response time: 1-2 days</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="team" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-cyan-500/20">
     <div class="text-center mb-12">
-      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-dawn-900">
-        Contact Us
-      </h2>
-      <p class="text-xs sm:text-sm font-semibold tracking-widest text-dawn-600 uppercase mt-2">
-        For Enquiries, Registration & Submission Support
-      </p>
-      <div class="h-0.5 w-20 mx-auto bg-gradient-to-r from-transparent via-gold-500 to-transparent mt-2"></div>
+      <h2 class="text-3xl font-extrabold text-white uppercase tracking-wider glow-text">Organizing Team</h2>
+      <div class="w-16 h-1 bg-cyan-400 mx-auto mt-2"></div>
     </div>
 
-    <!-- Outer Frame Card -->
-    <div class="rounded-2xl border-2 border-dawn-600/30 p-6 sm:p-8 lg:p-10 bg-white shadow-sm">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.5fr_2fr_1.5fr] gap-6 mb-10">
       
-      <!-- 3-Column Card Layout -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-        <!-- Card 1: Organising Secretary -->
-        <div class="bg-[#FAF6EE] border border-amber-200/70 rounded-xl p-6 flex flex-col justify-between">
-          <div class="space-y-2.5">
-            <div class="text-dawn-600 text-2xl">
-              <i class="fa-solid fa-user-gear"></i>
-            </div>
-            <h3 class="text-xs font-black tracking-wider uppercase text-dawn-900">
-              Organising Secretary
-            </h3>
-            <p class="text-dawn-800 font-bold text-sm">
-              Dr. Pritish Baskaran T B
-            </p>
-            <p class="text-xs text-slate-600">
-              Assistant Professor, Dept. of CFM
-            </p>
-          </div>
-          <div class="pt-4">
-            <a href="tel:+918610361238" class="text-sm font-bold text-dawn-700 hover:text-dawn-900 transition">
-              +91-8610361238
-            </a>
-          </div>
-        </div>
-
-        <!-- Card 2: Nodal Persons -->
-        <div class="bg-[#FAF6EE] border border-amber-200/70 rounded-xl p-6 flex flex-col justify-between">
-          <div class="space-y-2.5">
-            <div class="text-dawn-600 text-2xl">
-              <i class="fa-solid fa-user-gear"></i>
-            </div>
-            <h3 class="text-xs font-black tracking-wider uppercase text-dawn-900">
-              Nodal Persons
-            </h3>
-            <p class="text-dawn-800 font-bold text-sm">
-              Dr. Joe Amalan & Dr. Sivanthiga G
-            </p>
-            <p class="text-xs text-slate-600">
-              Senior Residents, Dept. of CFM
-            </p>
-          </div>
-          <div class="pt-4 text-xs sm:text-sm font-bold text-dawn-700 space-x-1">
-            <a href="tel:+919500874376" class="hover:text-dawn-900 transition">+91-9500874376</a>
-            <span>&amp;</span>
-            <a href="tel:+917373057587" class="hover:text-dawn-900 transition">+91-7373057587</a>
-          </div>
-        </div>
-
-        <!-- Card 3: Email Enquiry -->
-        <div class="bg-[#FAF6EE] border border-amber-200/70 rounded-xl p-6 flex flex-col justify-between">
-          <div class="space-y-2.5">
-            <div class="text-dawn-600 text-2xl">
-              <i class="fa-solid fa-envelope"></i>
-            </div>
-            <h3 class="text-xs font-black tracking-wider uppercase text-dawn-900">
-              Email Enquiry
-            </h3>
-            <p class="text-sm">
-              <a href="mailto:aipublichealthaiimsmg@gmail.com" class="text-dawn-800 hover:underline font-bold break-all">
-                aipublichealthaiimsmg@gmail.com
-              </a>
-            </p>
-          </div>
-          <div class="pt-4">
-            <span class="text-xs text-slate-500">Response time: 1-2 days</span>
-          </div>
-        </div>
-
+      <div class="bg-cyber-card p-5 rounded-xl border border-cyan-500/30">
+        <h3 class="font-bold text-cyan-400 uppercase tracking-wider mb-3">Patrons</h3>
+        <ul class="space-y-2 text-slate-300 text-sm sm:text-base">
+          <li><strong>Maj. Gen. Dr. Tapan Kumar Saha</strong><br/><span class="text-slate-400">President, AIIMS Mangalagiri</span></li>
+          <li><strong>Prof. Dr. Ahanthem Santa Singh</strong><br/><span class="text-slate-400">Executive Director, AIIMS Mangalagiri</span></li>
+        </ul>
       </div>
 
-    </div>
-
-  </div>
-</section>
-
-
-
-<!-- ORGANISING TEAM SECTION -->
-<section id="committee" class="py-12 bg-[#FAF8F5] border-b border-dawn-200/70 relative">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    
-    <!-- Section Heading -->
-    <div class="text-center max-w-3xl mx-auto mb-10">
-      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-dawn-900 mt-1">Organising Team</h2>
-      <div class="h-0.5 w-20 mx-auto bg-gradient-to-r from-transparent via-gold-500 to-transparent mt-2"></div>
-    </div>
-
-    <div class="space-y-10">
-
-      <!-- ================= 1. PATRONS (1 Row, 2 Enlarged Circles) ================= -->
-      <div>
-        <div class="text-center mb-5">
-          <span class="inline-block px-3.5 py-0.5 rounded-full bg-dawn-100 border border-dawn-200 text-dawn-900 text-xs font-bold uppercase tracking-wider">
-            Patrons
-          </span>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 max-w-2xl mx-auto gap-6 sm:gap-8">
-          
-          <!-- Patron 1 -->
-          <div class="flex flex-col items-center text-center group">
-            <div class="relative w-36 h-36 sm:w-44 sm:h-44 lg:w-48 lg:h-48 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-md overflow-hidden mb-3 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-20 h-20 sm:w-24 sm:h-24 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/tapan.jpg" alt="Maj. Gen. Dr. Tapan Kumar Saha" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-2xl px-4 py-2.5 shadow-sm min-h-[4.5rem] flex flex-col justify-center">
-              <h3 class="font-bold text-dawn-900 text-sm sm:text-base leading-snug">Maj. Gen. Dr. Tapan Kumar Saha</h3>
-              <p class="text-xs sm:text-sm text-slate-600 font-medium mt-0.5">President, AIIMS Mangalagiri</p>
-            </div>
-          </div>
-
-          <!-- Patron 2 -->
-          <div class="flex flex-col items-center text-center group">
-            <div class="relative w-36 h-36 sm:w-44 sm:h-44 lg:w-48 lg:h-48 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-md overflow-hidden mb-3 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-20 h-20 sm:w-24 sm:h-24 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/santa.jpg" alt="Prof. Dr. Ahanthem Santa Singh" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-2xl px-4 py-2.5 shadow-sm min-h-[4.5rem] flex flex-col justify-center">
-              <h3 class="font-bold text-dawn-900 text-sm sm:text-base leading-snug">Prof. Dr. Ahanthem Santa Singh</h3>
-              <p class="text-xs sm:text-sm text-slate-600 font-medium mt-0.5">CEO & Executive Director, AIIMS Mangalagiri</p>
-            </div>
-          </div>
-
-        </div>
+      <div class="bg-cyber-card p-5 rounded-xl border border-slate-800">
+        <h3 class="font-bold text-cyan-400 uppercase tracking-wider mb-3">Co-Patrons</h3>
+        <ul class="space-y-1.5 text-slate-300 text-sm sm:text-base">
+          <li class="whitespace-nowrap"><strong>Prof. Dr. Desu Rama Mohan</strong> (Dean Academics)</li>
+          <li class="whitespace-nowrap"><strong>Prof. Dr. Joy A Ghoshal</strong> (Dean Research)</li>
+          <li class="whitespace-nowrap"><strong>Prof. Dr. Sushil Sharma</strong> (Dean Examination)</li>
+          <li class="whitespace-nowrap"><strong>Prof. Dr. Deepti Vepakomma</strong> (Dean Student Welfare)</li>
+          <li class="whitespace-nowrap"><strong>Prof. Dr. Rajashekar Mohan</strong> (Medical Superintendent)</li>
+        </ul>
       </div>
 
-      <!-- ================= 2. CO-PATRONS (Single Line - All 5 Accommodated, Stepped-Up Size) ================= -->
-      <div>
-        <div class="text-center mb-5">
-          <span class="inline-block px-3.5 py-0.5 rounded-full bg-dawn-100 border border-dawn-200 text-dawn-900 text-xs font-bold uppercase tracking-wider">
-            Co-Patrons
-          </span>
-        </div>
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 max-w-6xl mx-auto gap-4 lg:gap-5">
-          
-          <!-- Co-patron 1 -->
-          <div class="flex flex-col items-center text-center group">
-            <div class="relative w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden mb-2.5 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-14 h-14 sm:w-16 sm:h-16 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/desu.jpg" alt="Prof. Dr. Desu Rama Mohan" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-xl px-2.5 py-2 shadow-sm min-h-[4.25rem] flex flex-col justify-center">
-              <h3 class="font-bold text-dawn-900 text-xs sm:text-[13px] leading-snug">Prof. Dr. Desu Rama Mohan</h3>
-              <p class="text-[11px] text-slate-600 font-medium mt-0.5">Dean (Academics)</p>
-            </div>
+      <div class="bg-cyber-card p-5 rounded-xl border border-cyan-500/30">
+        <h3 class="font-bold text-cyan-400 uppercase tracking-wider mb-3">Conclave Leadership</h3>
+        <div class="space-y-3 text-slate-300 text-sm sm:text-base">
+          <div>
+            <span class="text-slate-400 block uppercase text-[10px]">Chairperson</span>
+            <strong>Prof. Dr. Rajeev Aravindakshan</strong>
+            <p class="text-slate-400">Head of Department, CFM</p>
           </div>
-
-          <!-- Co-patron 2 -->
-          <div class="flex flex-col items-center text-center group">
-            <div class="relative w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden mb-2.5 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-14 h-14 sm:w-16 sm:h-16 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/joy.jpg" alt="Prof. Dr. Joy A Ghoshal" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-xl px-2.5 py-2 shadow-sm min-h-[4.25rem] flex flex-col justify-center">
-              <h3 class="font-bold text-dawn-900 text-xs sm:text-[13px] leading-snug">Prof. Dr. Joy A Ghoshal</h3>
-              <p class="text-[11px] text-slate-600 font-medium mt-0.5">Dean (Research)</p>
-            </div>
+          <div>
+            <span class="text-slate-400 block uppercase text-[10px]">Organising Secretary</span>
+            <strong>Dr. Pritish Baskaran T B</strong>
+            <p class="text-slate-400">Assistant Professor, CFM</p>
           </div>
-
-          <!-- Co-patron 3 -->
-          <div class="flex flex-col items-center text-center group">
-            <div class="relative w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden mb-2.5 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-14 h-14 sm:w-16 sm:h-16 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/sushil.jpg" alt="Prof. Dr. Sushil Sharma" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-xl px-2.5 py-2 shadow-sm min-h-[4.25rem] flex flex-col justify-center">
-              <h3 class="font-bold text-dawn-900 text-xs sm:text-[13px] leading-snug">Prof. Dr. Sushil Sharma</h3>
-              <p class="text-[11px] text-slate-600 font-medium mt-0.5">Dean (Examination)</p>
-            </div>
-          </div>
-
-          <!-- Co-patron 4 -->
-          <div class="flex flex-col items-center text-center group">
-            <div class="relative w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden mb-2.5 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-14 h-14 sm:w-16 sm:h-16 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/deepti.jpg" alt="Prof. Dr. Deepti Vepakomma" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-xl px-2.5 py-2 shadow-sm min-h-[4.25rem] flex flex-col justify-center">
-              <h3 class="font-bold text-dawn-900 text-xs sm:text-[13px] leading-snug">Prof. Dr. Deepti Vepakomma</h3>
-              <p class="text-[11px] text-slate-600 font-medium mt-0.5">Dean (Student Welfare)</p>
-            </div>
-          </div>
-
-          <!-- Co-patron 5 -->
-          <div class="flex flex-col items-center text-center group col-span-2 sm:col-span-1">
-            <div class="relative w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden mb-2.5 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-14 h-14 sm:w-16 sm:h-16 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/rajashekar.jpg" alt="Prof. Dr. Rajashekar Mohan" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-xl px-2.5 py-2 shadow-sm min-h-[4.25rem] flex flex-col justify-center max-w-[13rem] mx-auto">
-              <h3 class="font-bold text-dawn-900 text-xs sm:text-[13px] leading-snug">Prof. Dr. Rajashekar Mohan</h3>
-              <p class="text-[11px] text-slate-600 font-medium mt-0.5">Medical Superintendent</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- ================= 3. CONCLAVE LEADERSHIP (1 Row, 2 Circles - Gold Border, Stepped-Up Size) ================= -->
-      <div>
-        <div class="text-center mb-5">
-          <span class="inline-block px-3.5 py-0.5 rounded-full bg-gold-100 border border-gold-500/40 text-gold-600 text-xs font-bold uppercase tracking-wider shadow-sm">
-            Conclave Leadership
-          </span>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 max-w-2xl mx-auto gap-6 sm:gap-8">
-          
-          <!-- Chairperson -->
-          <div class="flex flex-col items-center text-center group">
-            <div class="relative w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 rounded-full bg-dawn-100 border-[5px] border-amber-500 ring-4 ring-amber-300/70 shadow-md overflow-hidden mb-2.5 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-14 h-14 sm:w-16 sm:h-16 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/rajeev.jpg" alt="Prof. Dr. Rajeev Aravindakshan" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <div class="w-full bg-[#FAF6EE] border-2 border-amber-400/80 rounded-2xl px-4 py-2.5 shadow-sm min-h-[4.75rem] flex flex-col justify-center">
-              <span class="text-[10px] font-extrabold uppercase tracking-widest text-amber-600">Chairperson</span>
-              <h3 class="font-bold text-dawn-900 text-sm leading-snug">Prof. Dr. Rajeev Aravindakshan</h3>
-              <p class="text-xs text-slate-600 font-medium mt-0.5">Head of Department, CFM</p>
-            </div>
-          </div>
-
-          <!-- Organising Secretary -->
-          <div class="flex flex-col items-center text-center group">
-            <div class="relative w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 rounded-full bg-dawn-100 border-[5px] border-amber-500 ring-4 ring-amber-300/70 shadow-md overflow-hidden mb-2.5 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-14 h-14 sm:w-16 sm:h-16 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/pritish.jpg" alt="Dr. Pritish Baskaran T B" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <div class="w-full bg-[#FAF6EE] border-2 border-amber-400/80 rounded-2xl px-4 py-2.5 shadow-sm min-h-[4.75rem] flex flex-col justify-center">
-              <span class="text-[10px] font-extrabold uppercase tracking-widest text-amber-600">Organising Secretary</span>
-              <h3 class="font-bold text-dawn-900 text-sm leading-snug">Dr. Pritish Baskaran T B</h3>
-              <p class="text-xs text-slate-600 font-medium mt-0.5">Assistant Professor, CFM</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- ================= 4. FACULTY / SCIENTIFIC COMMITTEE (3 Rows x 2 Columns, Stepped-Up Size) ================= -->
-      <div>
-        <div class="text-center mb-5">
-          <span class="inline-block px-3.5 py-0.5 rounded-full bg-dawn-100 border border-dawn-200 text-dawn-900 text-xs font-bold uppercase tracking-wider">
-            Faculty &bull; Scientific Committee
-          </span>
-        </div>
-        
-        <div class="grid grid-cols-1 sm:grid-cols-2 max-w-3xl mx-auto gap-4 sm:gap-5">
-          
-          <!-- Faculty 1 -->
-          <div class="flex items-center gap-4 bg-[#FAF6EE] border border-amber-200/70 rounded-2xl p-3 shadow-sm group">
-            <div class="relative w-24 h-24 sm:w-28 sm:h-28 flex-shrink-0 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-13 h-13 sm:w-15 sm:h-15 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/kalai.jpg" alt="Dr. Kalaiselvan G" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <div class="text-left">
-              <h3 class="font-bold text-dawn-900 text-xs sm:text-sm leading-snug">Prof. Kalaiselvan G</h3>
-              <p class="text-[11px] sm:text-xs text-slate-600 font-medium mt-0.5">Professor, CFM</p>
-            </div>
-          </div>
-
-          <!-- Faculty 2 -->
-          <div class="flex items-center gap-4 bg-[#FAF6EE] border border-amber-200/70 rounded-2xl p-3 shadow-sm group">
-            <div class="relative w-24 h-24 sm:w-28 sm:h-28 flex-shrink-0 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-13 h-13 sm:w-15 sm:h-15 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/dd.jpg" alt="Dr. Dhrubajyoti J Debnath" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <div class="text-left">
-              <h3 class="font-bold text-dawn-900 text-xs sm:text-sm leading-snug">Dr. Dhrubajyoti J Debnath</h3>
-              <p class="text-[11px] sm:text-xs text-slate-600 font-medium mt-0.5">Additional Prof., CFM</p>
-            </div>
-          </div>
-
-          <!-- Faculty 3 -->
-          <div class="flex items-center gap-4 bg-[#FAF6EE] border border-amber-200/70 rounded-2xl p-3 shadow-sm group">
-            <div class="relative w-24 h-24 sm:w-28 sm:h-28 flex-shrink-0 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-13 h-13 sm:w-15 sm:h-15 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/ss.jpg" alt="Dr. Sathiyanarayanan S" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <div class="text-left">
-              <h3 class="font-bold text-dawn-900 text-xs sm:text-sm leading-snug">Dr. Sathiyanarayanan S</h3>
-              <p class="text-[11px] sm:text-xs text-slate-600 font-medium mt-0.5">Additional Prof., CFM</p>
-            </div>
-          </div>
-
-          <!-- Faculty 4 -->
-          <div class="flex items-center gap-4 bg-[#FAF6EE] border border-amber-200/70 rounded-2xl p-3 shadow-sm group">
-            <div class="relative w-24 h-24 sm:w-28 sm:h-28 flex-shrink-0 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-13 h-13 sm:w-15 sm:h-15 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/arti.jpg" alt="Dr. Arti Gupta Reddy" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <div class="text-left">
-              <h3 class="font-bold text-dawn-900 text-xs sm:text-sm leading-snug">Dr. Arti Gupta Reddy</h3>
-              <p class="text-[11px] sm:text-xs text-slate-600 font-medium mt-0.5">Additional Prof., CFM</p>
-            </div>
-          </div>
-
-          <!-- Faculty 5 -->
-          <div class="flex items-center gap-4 bg-[#FAF6EE] border border-amber-200/70 rounded-2xl p-3 shadow-sm group">
-            <div class="relative w-24 h-24 sm:w-28 sm:h-28 flex-shrink-0 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-13 h-13 sm:w-15 sm:h-15 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/vsr.jpg" alt="Dr. Venkatashiva Reddy" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <div class="text-left">
-              <h3 class="font-bold text-dawn-900 text-xs sm:text-sm leading-snug">Dr. Venkatashiva Reddy B</h3>
-              <p class="text-[11px] sm:text-xs text-slate-600 font-medium mt-0.5">Associate Prof., CFM</p>
-            </div>
-          </div>
-
-          <!-- Faculty 6 -->
-          <div class="flex items-center gap-4 bg-[#FAF6EE] border border-amber-200/70 rounded-2xl p-3 shadow-sm group">
-            <div class="relative w-24 h-24 sm:w-28 sm:h-28 flex-shrink-0 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-13 h-13 sm:w-15 sm:h-15 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/navya.jpg" alt="Dr. Navya Krishna Naidu" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <div class="text-left">
-              <h3 class="font-bold text-dawn-900 text-xs sm:text-sm leading-snug">Dr. Navya Krishna Naidu</h3>
-              <p class="text-[11px] sm:text-xs text-slate-600 font-medium mt-0.5">Assistant Prof., CFM</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- ================= 5. SENIOR RESIDENTS (Centered, 2 Rows x 4 Columns = 8 Circles, Stepped-Up Size) ================= -->
-      <div>
-        <div class="text-center mb-5">
-          <span class="inline-block px-3.5 py-0.5 rounded-full bg-dawn-100 border border-dawn-200 text-dawn-900 text-xs font-bold uppercase tracking-wider">
-            Senior Residents
-          </span>
-        </div>
-        
-        <div class="grid grid-cols-2 sm:grid-cols-4 max-w-4xl mx-auto gap-4 sm:gap-5">
-          
-          <!-- SR 1 -->
-          <div class="flex flex-col items-center text-center group">
-            <div class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden mb-2 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-12 h-12 sm:w-14 sm:h-14 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/rashmi.jpg" alt="Dr. Rashmitha Priyadarsini" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-xl px-2 py-2 shadow-sm flex items-center justify-center min-h-[3rem]">
-              <h3 class="font-bold text-dawn-900 text-xs sm:text-[13px] leading-tight">Dr. Rashmitha Priyadarsini</h3>
-            </div>
-          </div>
-
-          <!-- SR 2 -->
-          <div class="flex flex-col items-center text-center group">
-            <div class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden mb-2 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-12 h-12 sm:w-14 sm:h-14 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/ap.jpg" alt="Dr. Anantha Prakash V" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-xl px-2 py-2 shadow-sm flex items-center justify-center min-h-[3rem]">
-              <h3 class="font-bold text-dawn-900 text-xs sm:text-[13px] leading-tight">Dr. Anantha Prakash V</h3>
-            </div>
-          </div>
-
-          <!-- SR 3 -->
-          <div class="flex flex-col items-center text-center group">
-            <div class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden mb-2 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-12 h-12 sm:w-14 sm:h-14 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/joe.jpg" alt="Dr. Joe Amalan A" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-xl px-2 py-2 shadow-sm flex items-center justify-center min-h-[3rem]">
-              <h3 class="font-bold text-dawn-900 text-xs sm:text-[13px] leading-tight">Dr. Joe Amalan A</h3>
-            </div>
-          </div>
-
-          <!-- SR 4 -->
-          <div class="flex flex-col items-center text-center group">
-            <div class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden mb-2 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-12 h-12 sm:w-14 sm:h-14 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/kishore.jpg" alt="Dr. Kishore Eswaramoorthi" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-xl px-2 py-2 shadow-sm flex items-center justify-center min-h-[3rem]">
-              <h3 class="font-bold text-dawn-900 text-xs sm:text-[13px] leading-tight">Dr. Kishore Eswaramoorthi</h3>
-            </div>
-          </div>
-
-          <!-- SR 5 -->
-          <div class="flex flex-col items-center text-center group">
-            <div class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden mb-2 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-12 h-12 sm:w-14 sm:h-14 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/prathyusha.jpg" alt="Dr. Prathyusha Lingareddy" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-xl px-2 py-2 shadow-sm flex items-center justify-center min-h-[3rem]">
-              <h3 class="font-bold text-dawn-900 text-xs sm:text-[13px] leading-tight">Dr. Prathyusha Lingareddy</h3>
-            </div>
-          </div>
-
-          <!-- SR 6 -->
-          <div class="flex flex-col items-center text-center group">
-            <div class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden mb-2 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-12 h-12 sm:w-14 sm:h-14 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/sivanthiga.jpg" alt="Dr. Sivanthiga G" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-xl px-2 py-2 shadow-sm flex items-center justify-center min-h-[3rem]">
-              <h3 class="font-bold text-dawn-900 text-xs sm:text-[13px] leading-tight">Dr. Sivanthiga G</h3>
-            </div>
-          </div>
-
-          <!-- SR 7 -->
-          <div class="flex flex-col items-center text-center group">
-            <div class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden mb-2 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-12 h-12 sm:w-14 sm:h-14 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/hashini.jpg" alt="Dr. Hashini D" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-xl px-2 py-2 shadow-sm flex items-center justify-center min-h-[3rem]">
-              <h3 class="font-bold text-dawn-900 text-xs sm:text-[13px] leading-tight">Dr. Hashini D</h3>
-            </div>
-          </div>
-
-          <!-- SR 8 -->
-          <div class="flex flex-col items-center text-center group">
-            <div class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-dawn-100 border-4 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden mb-2 transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-12 h-12 sm:w-14 sm:h-14 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/rajeswari.jpg" alt="Dr. Rajeswari" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <div class="w-full bg-[#FAF6EE] border border-amber-200/70 rounded-xl px-2 py-2 shadow-sm flex items-center justify-center min-h-[3rem]">
-              <h3 class="font-bold text-dawn-900 text-xs sm:text-[13px] leading-tight">Dr. Rajeswari</h3>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- ================= 6. JUNIOR RESIDENTS (3 Columns, Stepped-Up Size) ================= -->
-      <div>
-        <div class="text-center mb-5">
-          <span class="inline-block px-3.5 py-0.5 rounded-full bg-dawn-100 border border-dawn-200 text-dawn-900 text-xs font-bold uppercase tracking-wider">
-            Junior Residents
-          </span>
-        </div>
-        
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto gap-3 sm:gap-3.5">
-
-          <div class="flex items-center gap-3.5 bg-[#FAF6EE] border border-amber-200/70 rounded-xl p-2.5 shadow-sm group">
-            <div class="relative w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 rounded-full bg-dawn-100 border-3 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-9 h-9 sm:w-11 sm:h-11 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/sreelakshmi.jpg" alt="Dr. Sreelakshmi M" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <h3 class="font-bold text-dawn-900 text-xs sm:text-[13px] leading-snug">Dr. Sreelakshmi M</h3>
-          </div>
-
-          <div class="flex items-center gap-3.5 bg-[#FAF6EE] border border-amber-200/70 rounded-xl p-2.5 shadow-sm group">
-            <div class="relative w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 rounded-full bg-dawn-100 border-3 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-9 h-9 sm:w-11 sm:h-11 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/vijay.jpg" alt="Dr. Vijay Kishore A" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <h3 class="font-bold text-dawn-900 text-xs sm:text-[13px] leading-snug">Dr. Vijay Kishore A</h3>
-          </div>
-
-          <div class="flex items-center gap-3.5 bg-[#FAF6EE] border border-amber-200/70 rounded-xl p-2.5 shadow-sm group">
-            <div class="relative w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 rounded-full bg-dawn-100 border-3 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-9 h-9 sm:w-11 sm:h-11 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/vignesh.jpg" alt="Dr. Vignesh D" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <h3 class="font-bold text-dawn-900 text-xs sm:text-[13px] leading-snug">Dr. Vignesh D</h3>
-          </div>
-
-          <div class="flex items-center gap-3.5 bg-[#FAF6EE] border border-amber-200/70 rounded-xl p-2.5 shadow-sm group">
-            <div class="relative w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 rounded-full bg-dawn-100 border-3 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-9 h-9 sm:w-11 sm:h-11 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/subitsha.jpg" alt="Dr. Subitsha S" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <h3 class="font-bold text-dawn-900 text-xs sm:text-[13px] leading-snug">Dr. Subitsha S</h3>
-          </div>
-
-          <div class="flex items-center gap-3.5 bg-[#FAF6EE] border border-amber-200/70 rounded-xl p-2.5 shadow-sm group">
-            <div class="relative w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 rounded-full bg-dawn-100 border-3 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-9 h-9 sm:w-11 sm:h-11 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/praveen.jpg" alt="Dr. Praveen Kumar S" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <h3 class="font-bold text-dawn-900 text-xs sm:text-[13px] leading-snug">Dr. Praveen Kumar S</h3>
-          </div>
-
-          <div class="flex items-center gap-3.5 bg-[#FAF6EE] border border-amber-200/70 rounded-xl p-2.5 shadow-sm group">
-            <div class="relative w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 rounded-full bg-dawn-100 border-3 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-9 h-9 sm:w-11 sm:h-11 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/likhitha.jpg" alt="Dr. Ramireddy Gari Likhitha" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <h3 class="font-bold text-dawn-900 text-xs sm:text-[13px] leading-snug">Dr. Ramireddy Gari Likhitha</h3>
-          </div>
-
-          <div class="flex items-center gap-3.5 bg-[#FAF6EE] border border-amber-200/70 rounded-xl p-2.5 shadow-sm group">
-            <div class="relative w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 rounded-full bg-dawn-100 border-3 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-9 h-9 sm:w-11 sm:h-11 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/chandru.jpg" alt="Dr. Chandru R" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <h3 class="font-bold text-dawn-900 text-xs sm:text-[13px] leading-snug">Dr. Chandru R</h3>
-          </div>
-
-          <div class="flex items-center gap-3.5 bg-[#FAF6EE] border border-amber-200/70 rounded-xl p-2.5 shadow-sm group">
-            <div class="relative w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 rounded-full bg-dawn-100 border-3 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-9 h-9 sm:w-11 sm:h-11 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/kruthi.jpg" alt="Dr. Kruthi P Kulkarni" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <h3 class="font-bold text-dawn-900 text-xs sm:text-[13px] leading-snug">Dr. Kruthi P Kulkarni</h3>
-          </div>
-
-          <div class="flex items-center gap-3.5 bg-[#FAF6EE] border border-amber-200/70 rounded-xl p-2.5 shadow-sm group">
-            <div class="relative w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 rounded-full bg-dawn-100 border-3 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-9 h-9 sm:w-11 sm:h-11 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/haveela.jpg" alt="Dr. Haveela Rosy M" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <h3 class="font-bold text-dawn-900 text-xs sm:text-[13px] leading-snug">Dr. Haveela Rosy M</h3>
-          </div>
-
-          <div class="flex items-center gap-3.5 bg-[#FAF6EE] border border-amber-200/70 rounded-xl p-2.5 shadow-sm group">
-            <div class="relative w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 rounded-full bg-dawn-100 border-3 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-9 h-9 sm:w-11 sm:h-11 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/sowmi.jpg" alt="Dr. Sunil Kaarthik S" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <h3 class="font-bold text-dawn-900 text-xs sm:text-[13px] leading-snug">Dr. Sowmiha B M</h3>
-          </div>
-
-          <div class="flex items-center gap-3.5 bg-[#FAF6EE] border border-amber-200/70 rounded-xl p-2.5 shadow-sm group">
-            <div class="relative w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 rounded-full bg-dawn-100 border-3 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-9 h-9 sm:w-11 sm:h-11 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/niranjan.jpg" alt="Dr. Niranjan G" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <h3 class="font-bold text-dawn-900 text-xs sm:text-[13px] leading-snug">Dr. Niranjan G</h3>
-          </div>
-
-          <div class="flex items-center gap-3.5 bg-[#FAF6EE] border border-amber-200/70 rounded-xl p-2.5 shadow-sm group">
-            <div class="relative w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 rounded-full bg-dawn-100 border-3 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-9 h-9 sm:w-11 sm:h-11 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/gowri.jpg" alt="Dr. Maddu Gowri Shankar Naidu" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <h3 class="font-bold text-dawn-900 text-xs sm:text-[13px] leading-snug">Dr. Maddu Gowri Shankar Naidu</h3>
-          </div>
-
-          <div class="flex items-center gap-3.5 bg-[#FAF6EE] border border-amber-200/70 rounded-xl p-2.5 shadow-sm group">
-            <div class="relative w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 rounded-full bg-dawn-100 border-3 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-9 h-9 sm:w-11 sm:h-11 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/aashutosh.jpg" alt="Dr. Aashutosh Kumar Triloki" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <h3 class="font-bold text-dawn-900 text-xs sm:text-[13px] leading-snug">Dr. Aashutosh Kumar Triloki</h3>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- ================= 7. TUTORS (1 Row, 3 Circles - Size Matched to JR, Subtitle Removed) ================= -->
-      <div>
-        <div class="text-center mb-5">
-          <span class="inline-block px-3.5 py-0.5 rounded-full bg-dawn-100 border border-dawn-200 text-dawn-900 text-xs font-bold uppercase tracking-wider">
-            Tutors
-          </span>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-3 max-w-4xl mx-auto gap-3.5 sm:gap-4">
-          
-          <div class="flex items-center gap-3.5 bg-[#FAF6EE] border border-amber-200/70 rounded-xl p-2.5 shadow-sm group">
-            <div class="relative w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 rounded-full bg-dawn-100 border-3 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-9 h-9 sm:w-11 sm:h-11 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/sai.jpg" alt="Dr. Sai Sreenivas Kancharla" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <h3 class="font-bold text-dawn-900 text-xs sm:text-[13px] leading-snug">Dr. Sai Sreenivas Kancharla</h3>
-          </div>
-
-          <div class="flex items-center gap-3.5 bg-[#FAF6EE] border border-amber-200/70 rounded-xl p-2.5 shadow-sm group">
-            <div class="relative w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 rounded-full bg-dawn-100 border-3 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-9 h-9 sm:w-11 sm:h-11 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/gulshan.jpg" alt="Dr. Gulshan Basha" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <h3 class="font-bold text-dawn-900 text-xs sm:text-[13px] leading-snug">Dr. Gulshan Basha</h3>
-          </div>
-
-          <div class="flex items-center gap-3.5 bg-[#FAF6EE] border border-amber-200/70 rounded-xl p-2.5 shadow-sm group">
-            <div class="relative w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 rounded-full bg-dawn-100 border-3 border-white ring-2 ring-dawn-200/80 shadow-sm overflow-hidden transition duration-300 group-hover:scale-105 flex items-center justify-center">
-              <svg class="w-9 h-9 sm:w-11 sm:h-11 text-dawn-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <img src="team/priscilla.jpg" alt="Dr. Priscilla Roy" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
-            </div>
-            <h3 class="font-bold text-dawn-900 text-xs sm:text-[13px] leading-snug">Dr. Priscilla Roy</h3>
-          </div>
-
         </div>
       </div>
 
     </div>
 
-  </div>
-</section>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_2fr] gap-6 text-sm sm:text-base">
 
-  <!-- FOOTER -->
-  <footer class="py-8 bg-[#FAF8F5] text-center text-xs text-slate-500">
-<p>&copy; NCAIPH_2026 <br>Department of Community & Family Medicine, AIIMS Mangalagiri.<br> All rights reserved.</p>
+      <div class="bg-cyber-card p-5 rounded-xl border border-slate-800">
+        <h4 class="font-bold text-cyan-300 uppercase tracking-wider mb-2">Scientific Committee</h4>
+        <ul class="space-y-1 text-slate-300">
+          <li class="whitespace-nowrap">Dr. Kalaiselvan G, Professor, CFM</li>
+          <li class="whitespace-nowrap">Dr. Dhrubajyoti J Debnath, Additional Prof., CFM</li>
+          <li class="whitespace-nowrap">Dr. Sathiyanarayanan S, Additional Prof., CFM</li>
+          <li class="whitespace-nowrap">Dr. Arti Gupta Reddy, Additional Prof., CFM</li>
+          <li class="whitespace-nowrap">Dr. Venkatashiva Reddy, Associate Prof., CFM</li>
+          <li class="whitespace-nowrap">Dr. Navya Krishna Naidu, Assistant Prof., CFM</li>
+        </ul>
+      </div>
+
+      <div class="bg-cyber-card p-5 rounded-xl border border-slate-800">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div>
+            <h5 class="font-semibold text-cyan-300 uppercase tracking-wider">Senior Residents</h5>
+            <ul class="space-y-1 text-slate-300">
+              <li>Dr. Rashmitha Priyadarsini</li>
+              <li>Dr. Anantha Prakash V</li>
+              <li>Dr. Joe Amalan A</li>
+              <li>Dr. Kishore Eswaramoorthi</li>
+              <li>Dr. Prathyusha Lingareddy</li>
+              <li>Dr. Sivanthiga G</li>
+              <li>Dr. Hashini D</li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 class="font-semibold text-cyan-300 uppercase tracking-wider">Junior Residents</h5>
+            <ul class="space-y-1 text-slate-300">
+              <li>Dr. Utkarsha Tiwari</li>
+              <li>Dr. Sreelakshmi M</li>
+              <li>Dr. Vijay Kishore A</li>
+              <li>Dr. Vignesh D</li>
+              <li>Dr. Subitsha S</li>
+              <li>Dr. Praveen Kumar S</li>
+              <li>Dr. Ramireddy Gari Likhitha</li>
+              <li>Dr. Chandru R</li>
+              <li>Dr. Kruthi P Kulkarni</li>
+              <li>Dr. Haveela Rosy M</li>
+              <li>Dr. Sunil Kaarthik S</li>
+              <li>Dr. Niranjan G</li>
+              <li>Dr. Maddu Gowri Shankar Naidu</li>
+              <li>Dr. Aashutosh Kumar Triloki</li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 class="font-semibold text-cyan-300 uppercase tracking-wider">Tutors</h5>
+            <ul class="space-y-1 text-slate-300">
+              <li>Dr. Sai Sreenivas Kancharla</li>
+              <li>Dr. Gulshan Basha</li>
+              <li>Dr. Priscilla Roy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="bg-cyber-black border-t border-cyan-500/20 py-8 text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
+      <p class="text-slate-400">
+        Department of Community & Family Medicine | AIIMS Mangalagiri, Andhra Pradesh, India.
+      </p>
+      <p>© 2026 AIIMS Mangalagiri. All rights reserved.</p>
+    </div>
   </footer>
 
 </body>
